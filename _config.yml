@@ -7,8 +7,8 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
+locale                   : "en-UK"
+site_theme               : "air" # Currently available options are "default", "air"
 title                    : "Mattia Bellini"
 title_separator          : "-"
 name                     : &name "Your Name"
