@@ -1,0 +1,25 @@
+# Redirect bellinitia.com to bellinitia.me
+[[redirects]]
+  from = "https://bellinitia.com/*"
+  to = "https://bellinitia.me/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://bellinitia.com/*"
+  to = "https://bellinitia.me/:splat"
+  status = 301
+  force = true
+
+# Redirect www subdomain as well
+[[redirects]]
+  from = "https://www.bellinitia.com/*"
+  to = "https://bellinitia.me/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.bellinitia.com/*"
+  to = "https://bellinitia.me/:splat"
+  status = 301
+  force = true
