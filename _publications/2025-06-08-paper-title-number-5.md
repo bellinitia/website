@@ -4,7 +4,7 @@ collection: publications
 category: articles
 permalink: /publication/2024-02-17-paper-title-number-4
 excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2025-
+date: 2025-11-01
 venue: 'Victorians and Videogames'
 paperurl: 'https://academicpages.github.io/files/paper3.pdf'
 citation: 'Arnavas, Francesca; Bellini, Mattia (2025). Lies of P: Victorian posthuman and metamorphic bodies. In: Cameron, Brooke; Young, Lin (Ed.). <i>Victorians and Videogames</i>, Routledge.'
