@@ -16,7 +16,7 @@ description              : &description "Mattia Bellini's academic portfolio"   
 url                      : https://bellinitia.me # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "bellinitia/website.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -26,11 +26,11 @@ author:
   avatar           : "profile-pic.jpg"
   name             : "Mattia Bellini"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "University of Technology of Compiègne, Sorbonne University <br /> University of Tartu"
+  bio              : "I deal with Complexity"
+  location         : "France, Estonia"
+  employer         : "UTC Compiègne, Sorbonne University <br /> University of Tartu"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "bellinitia@gmail.com" 
 
   # Academic websites
   academia         : # URL
@@ -83,7 +83,7 @@ author:
 publication_category:
   books:
     title: 'Books'
-  manuscripts:
+  articles:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'

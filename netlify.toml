@@ -23,3 +23,10 @@
   to = "https://bellinitia.me/:splat"
   status = 301
   force = true
+
+
+### ZOOM REDIRECT - Redirect to the current Zoom meeting link
+[[redirects]]
+  from = "/meet"
+  to = "https://ut-ee.zoom.us/j/9151500129?pwd=WmUvWFc4c3EwdjJoVVptM2FqaDRpQT09"
+  status = 302 # Temporary Redirect
