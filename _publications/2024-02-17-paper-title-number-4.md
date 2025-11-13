@@ -1,13 +1,24 @@
 ---
-title: "Paper Title Number 4"
+title: "Video Games, Narratives, and Complexity"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: books
+authors:
+  - "Bellini, Mattia"
+  - "Doe, Jane"
+permalink: /publication/video-games-narratives-and-complexity
+excerpt: 'This work explores how the interplay between games and players creates rich, complex experiences.'
+date: 2025-05-12
+venue: 'University of Tartu Press'
+venue_type: "journal"
+volume: "12"
+issue: "2"
+firstpage: "45"
+lastpage: "72"
+doi: "10.1234/jgs.2024.5678"
+#slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
+pdf: 'https://bellinitia.me/files/2025-video-games-narratives-and-complexity.pdf'
+#bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
+language: "en"
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+What makes video games such powerful narrative media? My research explores how the interplay between games and players creates rich, complex experiences. By examining the ways in which video games narratives are organised, and how players collaboratively construct them, I uncover the mechanisms that make video game narratives so fascinating. In the first part of my work, I unpack the ingredients of compelling video game narratives. I show how certain storytelling techniques spark specific emotional and cognitive reactions in players, offering insights that could help game designers craft richer, more meaningful narratives. Next, I delve into the dynamic relationship between games and players as they collaborate to the sensemaking. This collaboration, I argue, behaves like a complex system, where countless interactions build something greater than the sum of its parts. In the final section, I bring these two threads together: the complexity of narratives and the complexity of sensemaking. I demonstrate how the two interact to produce the rich, multifaceted experiences we encounter in video games. Finally, I show how games can ease our mental workload by relying on cognitive shortcuts revealed by brain science. My findings have broad implications, touching on fields like narratology, media and game studies, game design, and beyond, and they open exciting possibilities for using video games to better represent and explore the complexity of our world.

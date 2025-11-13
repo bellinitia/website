@@ -47,31 +47,101 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation and page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a></p>
-        {% elsif page.citation and page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+      {% comment %}========== AUTO-GENERATE CITATION BY TYPE ========={% endcomment %}
+
+      {% comment %}Build author list once{% endcomment %}
+      {% capture author_list %}
+        {% if page.authors %}
+          {% if page.authors.size == 1 %}
+            {{ page.authors[0] }}
+          {% elsif page.authors.size == 2 %}
+            {{ page.authors[0] }} and {{ page.authors[1] }}
+          {% else %}
+            {% for author in page.authors %}
+              {% if forloop.last %}
+                and {{ author }}
+              {% elsif forloop.first %}
+                {{ author }}
+              {% else %}
+                {{ author }}, 
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         {% endif %}
+      {% endcapture %}
+
+      {% comment %}Build year{% endcomment %}
+      {% capture year %}{{ page.date | date: "%Y" }}{% endcapture %}
+
+      {% comment %}Generate citation based on publication type{% endcomment %}
+      {% capture auto_citation %}
+        {% if page.category == 'books' or page.category == 'manuscripts' %}
+          {% comment %}========== BOOK FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). <i>{{ page.title }}</i>. {{ page.venue }}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% elsif page.venue_type == 'journal' %}
+          {% comment %}========== JOURNAL ARTICLE FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). {{ page.title }}. <i>{{ page.venue }}</i>{% if page.volume %}, {{ page.volume }}{% endif %}{% if page.issue %}({{ page.issue }}){% endif %}{% if page.firstpage and page.lastpage %}, {{ page.firstpage }}-{{ page.lastpage }}{% elsif page.firstpage %}, {{ page.firstpage }}{% endif %}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% elsif page.venue_type == 'conference' %}
+          {% comment %}========== CONFERENCE PAPER FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). {{ page.title }}. In <i>{{ page.venue }}</i>{% if page.firstpage and page.lastpage %}, pp. {{ page.firstpage }}-{{ page.lastpage }}{% elsif page.firstpage %}, p. {{ page.firstpage }}{% endif %}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% else %}
+          {% comment %}========== GENERIC FORMAT (fallback) ========={% endcomment %}
+          {{ author_list | strip }}{% if year %} ({{ year }}){% endif %}. <i>{{ page.title }}</i>{% if page.venue %}. {{ page.venue }}{% endif %}{% if page.volume %}, Vol. {{ page.volume }}{% endif %}{% if page.issue %}({{ page.issue }}){% endif %}{% if page.firstpage and page.lastpage %}, pp. {{ page.firstpage }}-{{ page.lastpage }}{% endif %}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+        {% endif %}
+      {% endcapture %}
+
+      {% comment %}========== DISPLAY CITATION AND LINKS ========={% endcomment %}
+      <div class="citation-block" style="margin-top: 2em; padding: 1em; background-color: #f5f5f5; border-left: 4px solid #0066cc;">
+        <p style="font-size: smaller; margin-bottom: 0.5em;">
+          <strong>Recommended citation:</strong><br>
+          {{ auto_citation | strip }}
+        </p>
+        
+        <p style="font-size: smaller; margin-bottom: 0;">
+          {% comment %}Use 'pdf' as canonical, fall back to 'paperurl' for backward compatibility{% endcomment %}
+          {% assign paper_url = page.pdf | default: page.paperurl %}
+          
+          {% if paper_url %}
+            <a href="{{ paper_url }}" class="btn btn--small">
+              <i class="fa fa-file-pdf" aria-hidden="true"></i> Download Paper
+            </a>
+          {% endif %}
+          
+          {% if page.slidesurl %}
+            <a href="{{ page.slidesurl }}" class="btn btn--small">
+              <i class="fa fa-file-powerpoint" aria-hidden="true"></i> Download Slides
+            </a>
+          {% endif %}
+          
+          {% if page.bibtexurl %}
+            <a href="{{ page.bibtexurl }}" class="btn btn--small">
+              <i class="fa fa-quote-right" aria-hidden="true"></i> Download BibTeX
+            </a>
+          {% endif %}
+          
+          {% if page.doi %}
+            <a href="https://doi.org/{{ page.doi }}" class="btn btn--small">
+              <i class="fa fa-external-link" aria-hidden="true"></i> View at Publisher
+            </a>
+          {% endif %}
+        </p>
+      </div>
+
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
