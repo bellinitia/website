@@ -34,15 +34,70 @@
 <meta name="dc.date" content="{{ page.date | date_to_xmlschema }}">
 {% endif %}
 
-{% if page.venue %}
-  {% if page.venue_type == 'journal' %}
-  <meta name="citation_journal_title" content="{{ page.venue | escape }}">
-  {% elsif page.venue_type == 'conference' %}
-  <meta name="citation_conference_title" content="{{ page.venue | escape }}">
-  {% else %}
-  <meta name="citation_publisher" content="{{ page.venue | escape }}">
+{% comment %}========== ITEM TYPE FOR REFERENCE MANAGERS ========={% endcomment %}
+{% if page.extra == 'thesis' %}
+  {% comment %}Special case: Thesis{% endcomment %}
+  <meta name="citation_type" content="thesis">
+  <meta name="dc.type" content="Thesis">
+  {% if page.venue %}
+    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+    <meta name="citation_dissertation_institution" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% elsif page.extra == 'chapter' %}
+  {% comment %}Special case: Book Chapter{% endcomment %}
+  <meta name="citation_type" content="chapter">
+  <meta name="dc.type" content="Book Chapter">
+  {% if page.book_title %}
+    <meta name="citation_book_title" content="{{ page.book_title | escape }}">
+  {% endif %}
+  {% if page.editors %}
+    {% for editor in page.editors %}
+    <meta name="citation_editor" content="{{ editor | escape }}">
+    {% endfor %}
+  {% endif %}
+  {% if page.venue %}
+    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% elsif page.category == 'books' %}
+  <meta name="citation_type" content="book">
+  <meta name="dc.type" content="Book">
+  {% if page.venue %}
+    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% elsif page.category == 'journal' %}
+  <meta name="citation_type" content="journal_article">
+  <meta name="dc.type" content="Article">
+  {% if page.venue %}
+    <meta name="citation_journal_title" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% elsif page.category == 'conference' %}
+  <meta name="citation_type" content="conference_paper">
+  <meta name="dc.type" content="Conference Paper">
+  {% if page.venue %}
+    <meta name="citation_conference_title" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% elsif page.category == 'other' %}
+  <meta name="citation_type" content="preprint">
+  <meta name="dc.type" content="Preprint">
+  {% if page.venue %}
+    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+  {% endif %}
+  
+{% else %}
+  {% comment %}Fallback for uncategorized items{% endcomment %}
+  <meta name="citation_type" content="article">
+  <meta name="dc.type" content="Article">
+  {% if page.venue %}
+    <meta name="citation_publisher" content="{{ page.venue | escape }}">
   {% endif %}
 {% endif %}
+
+
 
 {% if page.volume %}<meta name="citation_volume" content="{{ page.volume | escape }}">{% endif %}
 {% if page.issue %}<meta name="citation_issue" content="{{ page.issue | escape }}">{% endif %}

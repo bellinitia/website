@@ -47,7 +47,7 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-      {% comment %}========== AUTO-GENERATE CITATION BY TYPE ========={% endcomment %}
+      {% comment %}========== AUTO-GENERATE CITATION BY CATEGORY ========={% endcomment %}
 
       {% comment %}Build author list once{% endcomment %}
       {% capture author_list %}
@@ -70,28 +70,70 @@ layout: default
         {% endif %}
       {% endcapture %}
 
+      {% comment %}Build editor list for chapters{% endcomment %}
+      {% capture editor_list %}
+        {% if page.editors %}
+          {% if page.editors.size == 1 %}
+            {{ page.editors[0] }} (Ed.)
+          {% elsif page.editors.size == 2 %}
+            {{ page.editors[0] }} & {{ page.editors[1] }} (Eds.)
+          {% else %}
+            {% for editor in page.editors %}
+              {% if forloop.last %}
+                & {{ editor }}
+              {% elsif forloop.first %}
+                {{ editor }}
+              {% else %}
+                {{ editor }}, 
+              {% endif %}
+            {% endfor %} (Eds.)
+          {% endif %}
+        {% endif %}
+      {% endcapture %}
+
       {% comment %}Build year{% endcomment %}
       {% capture year %}{{ page.date | date: "%Y" }}{% endcapture %}
 
-      {% comment %}Generate citation based on publication type{% endcomment %}
+      {% comment %}Generate citation based on extra field first, then category{% endcomment %}
       {% capture auto_citation %}
-        {% if page.category == 'books' or page.category == 'manuscripts' %}
+        {% if page.extra == 'thesis' %}
+          {% comment %}========== THESIS FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). <i>{{ page.title }}</i>. {% if page.thesis_type %}{{ page.thesis_type }}{% else %}PhD Thesis{% endif %}, {{ page.venue }}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% elsif page.extra == 'chapter' %}
+          {% comment %}========== BOOK CHAPTER FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). {{ page.title }}. In {{ editor_list | strip }}, <i>{{ page.book_title }}</i>{% if page.firstpage and page.lastpage %} (pp. {{ page.firstpage }}-{{ page.lastpage }}){% endif %}. {{ page.venue }}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% elsif page.category == 'books' %}
           {% comment %}========== BOOK FORMAT ========={% endcomment %}
           {{ author_list | strip }} ({{ year }}). <i>{{ page.title }}</i>. {{ page.venue }}.
           {% if page.doi %}
             DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
           {% endif %}
           
-        {% elsif page.venue_type == 'journal' %}
+        {% elsif page.category == 'journal' %}
           {% comment %}========== JOURNAL ARTICLE FORMAT ========={% endcomment %}
           {{ author_list | strip }} ({{ year }}). {{ page.title }}. <i>{{ page.venue }}</i>{% if page.volume %}, {{ page.volume }}{% endif %}{% if page.issue %}({{ page.issue }}){% endif %}{% if page.firstpage and page.lastpage %}, {{ page.firstpage }}-{{ page.lastpage }}{% elsif page.firstpage %}, {{ page.firstpage }}{% endif %}.
           {% if page.doi %}
             DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
           {% endif %}
           
-        {% elsif page.venue_type == 'conference' %}
+        {% elsif page.category == 'conference' %}
           {% comment %}========== CONFERENCE PAPER FORMAT ========={% endcomment %}
           {{ author_list | strip }} ({{ year }}). {{ page.title }}. In <i>{{ page.venue }}</i>{% if page.firstpage and page.lastpage %}, pp. {{ page.firstpage }}-{{ page.lastpage }}{% elsif page.firstpage %}, p. {{ page.firstpage }}{% endif %}.
+          {% if page.doi %}
+            DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+          {% endif %}
+          
+        {% elsif page.category == 'other' %}
+          {% comment %}========== PREPRINT/OTHER FORMAT ========={% endcomment %}
+          {{ author_list | strip }} ({{ year }}). {{ page.title }}. <i>{{ page.venue }}</i>.
           {% if page.doi %}
             DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
           {% endif %}
@@ -105,6 +147,7 @@ layout: default
         {% endif %}
       {% endcapture %}
 
+
       {% comment %}========== DISPLAY CITATION AND LINKS ========={% endcomment %}
       <div class="citation-block" style="margin-top: 2em; padding: 1em; background-color: #f5f5f5; border-left: 4px solid #0066cc;">
         <p style="font-size: smaller; margin-bottom: 0.5em;">
@@ -113,7 +156,6 @@ layout: default
         </p>
         
         <p style="font-size: smaller; margin-bottom: 0;">
-          {% comment %}Use 'pdf' as canonical, fall back to 'paperurl' for backward compatibility{% endcomment %}
           {% assign paper_url = page.pdf | default: page.paperurl %}
           
           {% if paper_url %}

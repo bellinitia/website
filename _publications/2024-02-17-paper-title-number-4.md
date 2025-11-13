@@ -1,15 +1,14 @@
 ---
-title: "Video Games, Narratives, and Complexity"
+title: "Test"
 collection: publications
 category: books
 authors:
   - "Bellini, Mattia"
   - "Doe, Jane"
-permalink: /publication/video-games-narratives-and-complexity
-excerpt: 'This work explores how the interplay between games and players creates rich, complex experiences.'
+permalink: /publication/testing-publication
+excerpt: 'This is a test publication'
 date: 2025-05-12
 venue: 'University of Tartu Press'
-venue_type: "journal"
 volume: "12"
 issue: "2"
 firstpage: "45"

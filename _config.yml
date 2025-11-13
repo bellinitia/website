@@ -84,9 +84,11 @@ publication_category:
   books:
     title: 'Books'
   articles:
-    title: 'Journal Articles'    
+    title: 'Journal Articles and Book Chapters'    
   conferences:
     title: 'Conference Papers'
+  other:
+    title: 'Other publications'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
