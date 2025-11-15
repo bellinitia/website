@@ -8,7 +8,6 @@ authors:
 editors:
   - "Smith, John"
   - "Doe, Jane"
-permalink: /publication/2025-lies-of-p-victorian-posthuman-metamorphic-bodies
 excerpt: 'This chapter examines the video game _Lies of P_ focusing on its depiction of the posthuman body.'
 date: 2025-11-01
 venue: 'Routledge'

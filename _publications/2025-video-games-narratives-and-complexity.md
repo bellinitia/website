@@ -4,7 +4,6 @@ collection: publications
 category: books
 authors:
   - "Bellini, Mattia"
-permalink: /publication/2025-video-games-narratives-and-complexity
 excerpt: 'This work explores how the interplay between games and players creates rich, complex experiences.'
 date: 2025-05-12
 venue: 'University of Tartu Press'

@@ -82,13 +82,14 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   books:
-    title: 'Books'
+    title: 'Books and Theses'
+    includes: ['books', 'thesis']
   articles:
-    title: 'Journal Articles and Book Chapters'    
-  conferences:
-    title: 'Conference Papers'
+    title: 'Articles, Chapters, and Conference Papers'
+    includes: ['journal', 'chapter', 'conference']
   other:
-    title: 'Other publications'
+    title: 'Other Publications'
+    includes: ['other']
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -222,16 +223,16 @@ kramdown:
 collections:
   teaching:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title/
   publications:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title/
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title/
   talks:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:title/
 
 
 # These settings control how pages and collections are included in the site

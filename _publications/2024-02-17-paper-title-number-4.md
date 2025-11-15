@@ -5,7 +5,6 @@ category: books
 authors:
   - "Bellini, Mattia"
   - "Doe, Jane"
-permalink: /publication/testing-publication
 excerpt: 'This is a test publication'
 date: 2025-05-12
 venue: 'University of Tartu Press'
@@ -15,8 +14,9 @@ firstpage: "45"
 lastpage: "72"
 doi: "10.1234/jgs.2024.5678"
 #slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-pdf: 'https://bellinitia.me/files/2025-video-games-narratives-and-complexity.pdf'
+#pdf: 'https://bellinitia.me/files/2025-video-games-narratives-and-complexity.pdf'
 #bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
+slug: 'trieste'
 language: "en"
 ---
 
