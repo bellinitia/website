@@ -1,0 +1,606 @@
+[
+	{
+		"id": "http://zotero.org/users/6955108/items/9D5BLLN5",
+		"type": "paper-conference",
+		"abstract": "Different have been the attempts to use Procedural Content Generation via Machine Learning in game development. Among the others, some researchers have tried to adapt a game, or some part of it, to the user playing it. This approach has been called “adaptive game design”. Contrarily to what it may seem, apparently the most interesting findings in this field have been made for drama managers, i.e. for the artificial intelligences that procedurally generate story flow. The paper takes the move from what seems to be a missing in current literature and it is aimed at proposing and discussing a possible procedural content generation via machine learning model that takes the latest approaches in machine learning applied to drama managers and combine them with findings from adaptive game design. The objective of the proposed model is to give players the best possible gaming experience of a highly branched game, depending on their attitudes towards the gaming world.",
+		"container-title": "CEUR Workshop Proceedings",
+		"event-place": "Padova, Italy",
+		"event-title": "Proceedings of 3rd Workshop on Games-Human Interaction (GHItaly 2019) co-located with CHItaly 2019 – Biannual conference on Computer-Human Interaction",
+		"language": "English",
+		"publisher": "CEUR-WS",
+		"publisher-place": "Padova, Italy",
+		"source": "Semantic Scholar",
+		"title": "Towards a Model to meet Players' Preferences in Games",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/XQWWDJZE",
+		"type": "paper-conference",
+		"abstract": "User interfaces are substantial parts of the gamer’s experience, but they are not only showing useful information to the player. Indeed, they can also be used to transmit narrative elements, even if sometimes only under the form of the “mood” of the game. Since interfaces can be used to enhance storytelling, their design should be aware of issues of narrative theory. The suspension of disbelief is probably the main cognitive mechanism to be considered, that is the process of both knowing and forgetting that what is happening in a game is fictional. The equilibrium between those two sides is precarious. This is why all the narrative elements have to be created to keep the balance: user interfaces are not excluded. In this paper, the focus of the analysis is the possible contribution of interfaces to the storytelling, and the contribution of narrative theory in game design, particularly regarding the suspension of disbelief.",
+		"container-title": "CEUR Workshop Proceedings",
+		"event-place": "Castiglione della Pescaia, Italy",
+		"event-title": "Proceedings of 2nd Workshop on Games-Human Interaction (GHItaly 2018) co-located with AVI 2018 - International Working Conference on Advanced Visual Interfaces",
+		"language": "English",
+		"publisher": "CEUR-WS",
+		"publisher-place": "Castiglione della Pescaia, Italy",
+		"source": "Semantic Scholar",
+		"title": "The impact of user interfaces for the enhancement of narrative elements of a video game",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/WNE5B26J",
+		"type": "article-journal",
+		"abstract": "The application of complex systems theories to the study of narratives proved able to offer a high heuristic value for the analysis of movies [24,26], TV series [35,36], music [45] and different other media with narrative capacity [cf. 20]. However, they were not yet thoroughly employed for the study of video game narratives. To address the relation between formal complexity and the complexity of response in video games, this paper conducts a contrastive analysis of two games of the Halo series, namely Halo 3 [6] and Halo 3 ODST [7]. Formal complexity is analyzed by applying Cutting's [13] approach for counting (narratorial) complexity. The evaluation of the responses to the narratives of these games is based on crowdsourced data, through Hven's [24] and Kiss and Willemsen's [26] understanding of audience response. The findings reveal that a complex response is at least partly predictable through an analysis of the formal quantitative and qualitative/organizational aspects of narratives, and, ultimately, that narrative complexity is a factor in the appreciation of games by the audience. The paper also poses the basis for the identification of a \"Goldilocks level of complexity', which can maximize the appreciation of video games stories.",
+		"container-title": "Proceedings of the ACM on Human-Computer Interaction",
+		"DOI": "10.1145/3474702",
+		"issue": "CHI PLAY",
+		"journalAbbreviation": "Proc. ACM Hum.-Comput. Interact.",
+		"page": "275:1–275:17",
+		"source": "September 2021",
+		"title": "Formal Organization and Complex Responses to Video Games Narratives",
+		"URL": "https://doi.org/10.1145/3474702",
+		"volume": "5",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2021",
+					11,
+					11
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					10,
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/VF3YTH2B",
+		"type": "paper-conference",
+		"collection-title": "CEUR Workshop Proceedings",
+		"container-title": "Joint Proceedings of 4th Workshop on Games-Human Interaction (GHItaly21) & 1st Workshop on Multi-party Interaction in eXtended Reality (MIXR)",
+		"event-place": "Bolzano (Italy), July",
+		"event-title": "Games-Human Interaction (GHItaly21) and  Multi-party Interaction in eXtended Reality (MIXR)",
+		"language": "en",
+		"note": "ISSN: 1613-0073",
+		"publisher": "CEUR",
+		"publisher-place": "Bolzano (Italy), July",
+		"source": "CEUR Workshop Proceedings",
+		"title": "Framing the Dilemma: The Influence of Immersion in Ethical Choice Making",
+		"title-short": "Framing the Dilemma",
+		"volume": "2934",
+		"author": [
+			{
+				"family": "Meier",
+				"given": "Marie-Luise"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"editor": [
+			{
+				"family": "Marsico",
+				"given": "Maria De"
+			},
+			{
+				"family": "Gadia",
+				"given": "Davide"
+			},
+			{
+				"family": "Ripamonti",
+				"given": "Laura Anna"
+			},
+			{
+				"family": "Maggiorini",
+				"given": "Dario"
+			},
+			{
+				"family": "Mariani",
+				"given": "Ilaria"
+			},
+			{
+				"family": "Mancini",
+				"given": "Maurizio"
+			},
+			{
+				"family": "Varni",
+				"given": "Giovanna"
+			},
+			{
+				"family": "Murphy",
+				"given": "David"
+			},
+			{
+				"family": "Pellacini",
+				"given": "Fabio"
+			},
+			{
+				"family": "Maye",
+				"given": "Laura"
+			},
+			{
+				"family": "O'Toole",
+				"given": "Patrick"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					8,
+					19
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/NBURKTJJ",
+		"type": "article-journal",
+		"abstract": "Is our way of expressing meanings through digital interactive artifacts simple? How does our sensemaking work when we try to understand Interactive Digital Narratives? To answer these and other questions, the present article discusses a complex-systemic understanding of the expressive mechanisms of Interactive Digital Narratives, to argue the expressive complexity of these artifacts. Interactors of Interactive Digital Narratives necessarily base their hermeneutic processes mainly on what is conveyed in the artifact itself; yet the question of how meaning is expressed in (and sense-making is guided by) Interactive Digital Narratives remains significantly open. I contend that sense-making in such artifacts works by synthetizing the knowledge coming from a number of layers of information, which are intercurrent, interdependent and interoperating, and which concurrently participate in the creation of an overall meaning of a higher order. According to complex systems theory, these layers are therefore elements of a complex system: this justifies the understanding. Even though largely unexplored, this understanding may help advance our knowledge of the representational capabilities and affordances of Interactive Digital Narrarives, not least in representing multifaceted worlds and complex phenomena. A complex-systemic view can also improve our comprehension of the interpretative processes involved in the sense-making of Interactive Digital Narratives. Furthermore, the awareness gained through this understanding could be useful to get a better sense of the impact of the narratives featured in these artifacts, and ultimately to create more engaging and more powerful experiences that can help foster the societal impact of Interactive Digital Narratives.",
+		"container-title": "Frontiers in Virtual Reality",
+		"ISSN": "2673-4192",
+		"title": "Interactive Digital Narratives as Complex Expressive Means",
+		"URL": "https://www.frontiersin.org/article/10.3389/frvir.2022.854960",
+		"volume": "3",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					6,
+					9
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/YW6W76IL",
+		"type": "article-journal",
+		"abstract": "The digital representation of our past has long been an important tool in the interpretation of cultural heritage in museums. The recent rise in the use of Augmented Reality (AR) has seen various approaches to adding dynamic information to existent artefacts. The challenge is even greater when uncertainty further complexifies the represented history. This paper presents a critical analysis of an AR installation in the Sacra Infermeria museum in Valletta, Malta. After a description of the AR configuration of the installation, we present a thematic analysis carried out from a multidisciplinary focus group of 11 researchers in the field of Interactive Digital Narratives (IDN), from three perspectives: the technological implementation of the AR experience, the historical accuracy, gamification and the influence of social media-centred design, and the representation of the complexity arising from the uncertainty of history. In the light of the results of the multidisciplinary focus group, we provide a list of recommendations and heuristics.",
+		"container-title": "New Review of Hypermedia and Multimedia",
+		"DOI": "10.1080/13614568.2022.2150324",
+		"ISSN": "1361-4568",
+		"issue": "0",
+		"note": "publisher: Taylor & Francis\n_eprint: https://doi.org/10.1080/13614568.2022.2150324",
+		"page": "1-29",
+		"source": "Taylor and Francis+NEJM",
+		"title": "The Sacra Infermeria—a focus group evaluation of an augmented reality cultural heritage experience",
+		"URL": "https://doi.org/10.1080/13614568.2022.2150324",
+		"volume": "0",
+		"author": [
+			{
+				"family": "Barbara",
+				"given": "Jonathan"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Koenitz",
+				"given": "Hartmut"
+			},
+			{
+				"family": "Makai",
+				"given": "Péter Kristóf"
+			},
+			{
+				"family": "Sampatakou",
+				"given": "Despoina"
+			},
+			{
+				"family": "Irshad",
+				"given": "Shafaq"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					3,
+					30
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					1,
+					19
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/YTDEC7ZW",
+		"type": "article",
+		"abstract": "This white paper was written by the members of the Work Group focusing on design practices of the COST Action 18230 - Interactive Narrative Design for Complexity Representation (INDCOR, WG1). It presents an overview of Interactive Digital Narratives (IDNs) design for complexity representations through IDN workflows and methodologies, IDN authoring tools and applications. It provides definitions of the central elements of the IDN alongside its best practices, designs and methods. Finally, it describes complexity as a feature of IDN, with related examples. In summary, this white paper serves as an orienting map for the field of IDN design, understanding where we are in the contemporary panorama while charting the grounds of their promising futures.",
+		"DOI": "10.48550/arXiv.2305.01925",
+		"note": "arXiv:2305.01925 [cs]",
+		"number": "arXiv:2305.01925",
+		"publisher": "arXiv",
+		"source": "arXiv.org",
+		"title": "INDCOR White Paper 2: Interactive Narrative Design for Representing Complexity",
+		"URL": "http://arxiv.org/abs/2305.01925",
+		"author": [
+			{
+				"family": "Perkis",
+				"given": "Andrew"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Nisi",
+				"given": "Valentina"
+			},
+			{
+				"family": "Reyes",
+				"given": "Maria Cecilia"
+			},
+			{
+				"family": "Sylla",
+				"given": "Cristina"
+			},
+			{
+				"family": "Santa",
+				"given": "Mijalche"
+			},
+			{
+				"family": "Zaluczkowska",
+				"given": "Anna"
+			},
+			{
+				"family": "Irshad",
+				"given": "Shafaq"
+			},
+			{
+				"family": "Bakk",
+				"given": "Ágnes"
+			},
+			{
+				"family": "Barnabé",
+				"given": "Fanny"
+			},
+			{
+				"family": "Barnard",
+				"given": "Daniel"
+			},
+			{
+				"family": "Boukhelifa",
+				"given": "Nadia"
+			},
+			{
+				"family": "Klungre",
+				"given": "Øyvind Sørdal"
+			},
+			{
+				"family": "Koenitz",
+				"given": "Hartmut"
+			},
+			{
+				"family": "Lombardo",
+				"given": "Vincenzo"
+			},
+			{
+				"family": "Elahdhari",
+				"given": "Mirjam Palosaari"
+			},
+			{
+				"family": "Prandi",
+				"given": "Catia"
+			},
+			{
+				"family": "Rettberg",
+				"given": "Scott"
+			},
+			{
+				"family": "Serbanescu",
+				"given": "Anca"
+			},
+			{
+				"family": "Sousa",
+				"given": "Sonia"
+			},
+			{
+				"family": "Stefaneas",
+				"given": "Petros"
+			},
+			{
+				"family": "Uzunov",
+				"given": "Dimitar"
+			},
+			{
+				"family": "Vosmeer",
+				"given": "Mirjam"
+			},
+			{
+				"family": "Wardaszko",
+				"given": "Marcin"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					5,
+					24
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					5,
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/JQP6KF96",
+		"type": "paper-conference",
+		"abstract": "The narrative sense-making of video games relies on different sources of information. Among them is the multimodal system through which games are made sensorially perceivable, the sensorimotor experiences they afford and require, and the mnemonic recollection through which they are made understandable. These sources show strong feedback loops and give rise to an overall meaning that is more than the sum of its parts. As such, narrative-driven video games can be considered complex in themselves. In order to test this theoretical model, a custom-made video game has been developed. By employing simple mechanics and simple graphics, the game will be the basis for conducting a think-aloud session. The session will give insights into the actual cognitive mechanisms of players, to investigate how their sense-making works.",
+		"collection-title": "GoodIT '23",
+		"container-title": "Proceedings of the 2023 ACM Conference on Information Technology for Social Good",
+		"DOI": "10.1145/3582515.3609539",
+		"event-place": "New York, NY, USA",
+		"ISBN": "979-8-4007-0116-0",
+		"note": "PDF: https://jaclynhughes.wordpress.com/wp-content/uploads/2015/06/hello.pdf",
+		"page": "233–236",
+		"publisher": "Association for Computing Machinery",
+		"publisher-place": "New York, NY, USA",
+		"source": "ACM Digital Library",
+		"title": "Validating Video Games as Complex Artifacts",
+		"URL": "https://doi.org/10.1145/3582515.3609539",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					8,
+					25
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			],
+			"season": "Settembre"
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/IB759PW4",
+		"type": "article-journal",
+		"abstract": "“Fairy tales begin with conflict because we all begin our lives with conflict,” famously states Jack Zipes. And yet, this statement does not always seem to apply to non-Western story structures. An example of this is the East Asian Kishōtenketsu, which implies a story development that does not necessarily revolve around conflicts, but that interprets potential clashes more as contrasts that can be somehow harmonized. In many of Hayao Miyazaki’s movies (e.g., My Neighbor Totoro, Spirited Away, The Secret World of Arietty), it is possible to detect, on the one hand, the widespread presence of Western fairy-tale tropes, and, on the other hand, a plot strongly influenced by the Kishōtenketsu model. This article argues that: 1.) The way in which Miyazaki’s stories represent conflictual situations is less dichotomous than in the Western tradition, and conflicts in his movies are depicted in the forms of open riddles, implying an interrogative attitude, a playful and flexible state of mind; and 2.) The employment of unusual narrative patterns in Miyazaki’s movies, mixing up together Eastern and Western frames of reference, gives rise to stories that puzzle the mind of spectators, working as complex narrative riddles.",
+		"container-title": "Narrative Works",
+		"ISSN": "1925-0622",
+		"language": "en",
+		"license": "Copyright (c) 2023 Francesca Arnavas, Mattia Bellini",
+		"source": "journals.lib.unb.ca",
+		"title": "Miyazaki's Hybrid Worlds and Their Riddle-Stories: Western Tropes and Kishōtenketsu",
+		"title-short": "Miyazaki's Hybrid Worlds and Their Riddle-Stories",
+		"URL": "https://journals.lib.unb.ca/index.php/NW/article/view/33773",
+		"volume": "12",
+		"author": [
+			{
+				"family": "Arnavas",
+				"given": "Francesca"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					1,
+					17
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					12,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/983YPT97",
+		"type": "article-journal",
+		"abstract": "Bodies often play an important role in all sorts of fairy tales. Is this the case when fairy tales are reinterpreted in video games? And what can the embodied and enactive participation afforded by video games tell us about their players' understanding of these new fairy tales? This article provides reflections over both these questions by analyzing the video game The Wolf Among Us, a 2013/14 graphic adventure game developed and published by Telltale Games and inspired by fairy tales. Through this analysis, I ultimately discuss how contemporary sensibilities further transformed traditional fairy tales and their postmodern adaptations, highlighting the ever-evolving life of the fairy tale.",
+		"container-title": "Marvels & Tales",
+		"ISSN": "1536-1802",
+		"issue": "2",
+		"note": "publisher: Wayne State University Press",
+		"page": "287-302",
+		"source": "Project MUSE",
+		"title": "Fairy-Tale Bodies and Embodying the Fairy Tale in Telltale Games' The Wolf Among Us",
+		"URL": "https://muse.jhu.edu/pub/27/article/923686",
+		"volume": "37",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					4,
+					11
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/BQRPIUI8",
+		"type": "article",
+		"abstract": "The nature of interaction within Interactive Digital Narrative (IDN) is inherently complex. This is due, in part, to the wide range of potential interaction modes through which IDNs can be conceptualised, produced and deployed and the complex dynamics this might entail. The purpose of this whitepaper is to provide IDN practitioners with the essential knowledge on the nature of interaction in IDNs and allow them to make informed design decisions that lead to the incorporation of complexity thinking throughout the design pipeline, the implementation of the work, and the ways its audience perceives it. This white paper is concerned with the complexities of authoring, delivering and processing dynamic interactive contents from the perspectives of both creators and audiences. This white paper is part of a series of publications by the INDCOR COST Action 18230 (Interactive Narrative Design for Complexity Representations), which all clarify how IDNs representing complexity can be understood and applied (INDCOR WP 0 - 5, 2023).",
+		"DOI": "10.48550/arXiv.2306.10547",
+		"note": "arXiv:2306.10547 [cs]",
+		"number": "arXiv:2306.10547",
+		"publisher": "arXiv",
+		"source": "arXiv.org",
+		"title": "INDCOR white paper 3: Interactive Digital Narratives and Interaction",
+		"title-short": "INDCOR white paper 3",
+		"URL": "http://arxiv.org/abs/2306.10547",
+		"author": [
+			{
+				"family": "Nack",
+				"given": "Frank"
+			},
+			{
+				"family": "Louchart",
+				"given": "Sandy"
+			},
+			{
+				"family": "Lund",
+				"given": "Kris"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Georgieva",
+				"given": "Iva"
+			},
+			{
+				"family": "Atmaja",
+				"given": "Pratama W."
+			},
+			{
+				"family": "Makai",
+				"given": "Peter"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					3,
+					20
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					10,
+					13
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/5ZQVQADE",
+		"type": "thesis",
+		"abstract": "What makes video games such powerful narrative media? My research explores how the interplay between games and players creates rich, complex experiences. By examining the ways in which video games narratives are organised, and how players collaboratively construct them, I uncover the mechanisms that make video game narratives so fascinating. In the first part of my work, I unpack the ingredients of compelling video game narratives. I show how certain storytelling techniques spark specific emotional and cognitive reactions in players, offering insights that could help game designers craft richer, more meaningful narratives. Next, I delve into the dynamic relationship between games and players as they collaborate to the sensemaking. This collaboration, I argue, behaves like a complex system, where countless interactions build something greater than the sum of its parts. In the final section, I bring these two threads together: the complexity of narratives and the complexity of sensemaking. I demonstrate how the two interact to produce the rich, multifaceted experiences we encounter in video games. Finally, I show how games can ease our mental workload by relying on cognitive shortcuts revealed by brain science. My findings have broad implications, touching on fields like narratology, media and game studies, game design, and beyond, and they open exciting possibilities for using video games to better represent and explore the complexity of our world.",
+		"language": "en",
+		"note": "DOI: 10.13140/RG.2.2.15971.46887\nISBN: 9789916278789\nISSN: 1406-913X",
+		"publisher": "Tartu Ülikooli Kirjastus",
+		"source": "dspace.ut.ee",
+		"title": "Video Games, Narratives, and Complexity",
+		"URL": "https://hdl.handle.net/10062/109645",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					5,
+					20
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					5,
+					14
+				]
+			]
+		}
+	}
+]
