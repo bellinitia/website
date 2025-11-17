@@ -4,6 +4,63 @@
 
 {% include seo.html %}
 
+{% comment %}
+Global HTML <title> override for better SEO,
+while keeping page.title clean for Zotero and schema.
+{% endcomment %}
+
+{% assign page_type = nil %}
+
+{%- comment -%}
+Detect type and display label for publications
+{%- endcomment -%}
+{% if page.collection == 'publications' %}
+  {% if page.extra == 'thesis' %}
+    {% assign page_type = 'Thesis' %}
+  {% elsif page.extra == 'chapter' %}
+    {% assign page_type = 'Book Chapter' %}
+  {% elsif page.category == 'books' %}
+    {% assign page_type = 'Book' %}
+  {% elsif page.category == 'journal' %}
+    {% assign page_type = 'Journal Article' %}
+  {% elsif page.category == 'conference' %}
+    {% assign page_type = 'Conference Paper' %}
+  {% elsif page.category == 'other' %}
+    {% assign page_type = 'Preprint' %}
+  {% endif %}
+{% endif %}
+
+{%- comment -%}
+Build the SEO title string based on collection
+{%- endcomment -%}
+{% capture computed_title %}
+  {% if page.collection == 'publications' %}
+    {{ page.title }}{% if page_type %} - {{ page_type }}{% endif %} - Mattia Bellini
+
+  {% elsif page.collection == 'talks' %}
+    {{ page.title }}{% if page.venue %} - {{ page.venue }}{% endif %} - Mattia Bellini
+
+  {% elsif page.collection == 'portfolio' %}
+    {{ page.title }} - Mattia Bellini
+
+  {% elsif page.collection == 'teaching' %}
+    {{ page.title }}{% if page.university %} - {{ page.university }}{% endif %} - Mattia Bellini
+
+  {% else %}
+    {%- comment -%}
+    Fallback for other pages: keep it simple, or include site title
+    {%- endcomment -%}
+    {% if page.title %}
+      {{ page.title }} - Mattia Bellini
+    {% else %}
+      {{ site.title }}{% if site.title and site.tagline %} - {{ site.tagline }}{% endif %}
+    {% endif %}
+  {% endif %}
+{% endcapture %}
+
+<title>{{ computed_title | strip }}</title>
+
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
