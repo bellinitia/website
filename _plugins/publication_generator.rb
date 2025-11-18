@@ -76,7 +76,7 @@ module Jekyll
       data['pdf'] = pdf_url if pdf_url
 
       # Layout and standard front matter fields
-      data['layout']          = 'default'  # your publication layout is "layout: default"
+      #data['layout']          = 'default'  # your publication layout is "layout: default"
       data['collection']      = 'publications'
       data['author_profile']  = true
       data['share']           = true

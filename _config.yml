@@ -86,7 +86,7 @@ publication_category:
     includes: ['books', 'thesis']
   articles:
     title: 'Articles, Chapters, and Conference Papers'
-    includes: ['journal', 'chapter', 'conference']
+    includes: ['journal', 'chapter', 'conference', 'paper-conference', 'article-journal']
   other:
     title: 'Other Publications'
     includes: ['other']
@@ -226,7 +226,7 @@ collections:
     permalink: /:collection/:title/
   publications:
     output: true
-    permalink: /:collection/:title/
+    permalink: /:collection/:year-:title/
   portfolio:
     output: true
     permalink: /:collection/:title/
