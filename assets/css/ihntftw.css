@@ -1,0 +1,140 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  background: #090a13;
+  color: #e7eaf1;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 95%;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Credits section */
+
+.sectionCredits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding: 0;
+  font-weight: 100;
+}
+
+.credits-warning-bar {
+  width: 100vw;
+  font-size: 1.11em;
+  padding: 4vw 8vw;
+  box-sizing: border-box;
+  border-bottom: 1px solid #222;
+  letter-spacing: 0.01em;
+}
+
+.credits-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95vw;
+  margin: 2vw auto;
+  gap: 3vw;
+}
+
+.credits-left,
+.credits-right {
+  flex: 1;
+  min-width: 260px;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  margin-top: 1vw;
+}
+
+.credits-title {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 0.8em;
+}
+
+.credits-author {
+  letter-spacing: 0.04em;
+  font-size: 1.5em;
+  padding-bottom: 2vh;
+}
+
+.credits-label {
+  margin-top: 2vw;
+  margin-left: 0;
+}
+
+.credits-block ul {
+  padding-left: 2em;
+  margin: 0.3em 0;
+}
+
+.credits-block li {
+  margin-bottom: 0.5em;
+  list-style-type: none;
+}
+
+.credits-block li:before {
+  content: "●";
+  margin-left: -1em;
+  margin-right: 0.5em;
+  color: white;
+  font-size: 1.7em;
+  text-shadow:
+    0 0 15px #abf7fa,
+    0 0 27px #b3e7ff;
+  filter: blur(0.3px);
+}
+
+.credits-logo {
+  margin-top: 2vw;
+  width: 420px;
+  max-width: 85vw;
+  display: block;
+}
+
+@media only screen and (orientation: portrait) {
+  .sectionCredits {
+    font-size: 2em;
+  }
+
+  .credits-content {
+    display: block;
+    width: 80vw;
+  }
+
+  .credits-warning-bar {
+    padding: 8vw;
+  }
+
+  .credits-logo {
+    margin-bottom: 4vw;
+  }
+
+  .credits-left,
+  .credits-right {
+    width: auto;
+    min-width: 0;
+    margin-top: 4vw;
+  }
+}

@@ -1,0 +1,41 @@
+#typing {
+  background: url('../images/portfolio/ihntftw/i-have-no-time-for-the-woods-2.jpg')
+             center center/cover no-repeat;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #d8f8ff;
+  text-shadow:
+    0 0 15px #abf7fa,
+    0 0 27px #b3e7ff;
+  filter: blur(0.5px);
+}
+
+#typing .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#typingPar {
+  margin-top: -10%;
+}
+
+@media only screen and (orientation: portrait) {
+  #typing {
+    font-size: 2em;
+  }
+  #typingPar {
+    margin-top: -35%;
+  }
+}
+
+#cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.9s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50%   { opacity: 1; }
+  50.01%,100% { opacity: 0; }
+}

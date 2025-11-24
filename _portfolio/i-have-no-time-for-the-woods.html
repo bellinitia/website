@@ -1,0 +1,114 @@
+---
+title: "I Have No Time for the Woods - Mattia Bellini"
+excerpt: "A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity. <br/><img src='/images/portfolio/ihntftw/ihntftw_preview.png'>"
+collection: portfolio
+
+page_css:
+  - /assets/css/ihntftw.css
+  - /assets/css/orbs.css
+  - /assets/css/parallax.css
+  - /assets/css/typing.css
+  - /assets/css/timer.css
+
+page_js:
+  - https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js
+  - /assets/js/orbs.js
+  - /assets/js/parallax.js
+  - /assets/js/typing.js
+  - /assets/js/timer_zoom.js
+---
+
+<link rel="apple-touch-icon" sizes="180x180" href="../images/portfolio/ihntftw/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/portfolio/ihntftw/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/portfolio/ihntftw/favicon/favicon-16x16.png">
+<link rel="manifest" href="../images/portfolio/ihntftw/favicon/site.webmanifest">
+
+<div class="section sectionTitle">
+  <div class="container">
+    <div class="title">I Have No Time<br>for the Woods</div>
+    <div class="author">Mattia Bellini</div>
+    <div class="desc">
+      Inspired by Robert Frost’s poem <strong><em>Stopping by Woods on a Snowy Evening</em></strong>, this virtual reality experience represents the condition of overwork, where the pressure of self-imposed duties prevents the full enjoyment of small, passing pleasures. <strong>I Have No Time for the Woods</strong> plays with the mind of the interactor to reproduce the conflicting feelings of desire for a moment of serenity in restless days, and guilt when this serenity is finally found.
+    </div>
+  </div>
+  <div class="orbs-area" id="orbsArea" data-orbs="10"></div>
+</div>
+
+<div class="section sectionMain sectionParallax">
+  <div id="scene" data-relative-input="true" data-hover-only="true">
+    <div class="img-container parallax" data-depth="0.05">
+      <div class="parallax-bg-inner"></div>
+    </div>
+    <div class="parallax layer1" data-depth="0.1"><p>Deliver<br>by the<br>deadline</p></div>
+    <div class="parallax layer2" data-depth="0.2"><p>Deliver<br>by the<br>deadline</p></div>
+    <div class="parallax" data-depth="0.3"><p>Deliver<br>by the<br>deadline</p></div>
+  </div>
+  <button id="enable-motion" class="motion-btn">Enable motion effects</button>
+</div>
+
+<div class="section sectionMain" id="typing">
+  <div class="img-container">
+    <p id="typingPar">WHOSE WOODS THESE ARE I THINK I KNOW</p>
+    <span id="cursor">|</span>
+  </div>
+</div>
+
+<div class="section sectionMain" id="timerSection">
+  <div class="bg-zoom-layer"></div>
+  <div class="timer-section">
+    <div class="timer-display" id="time">00:10:000</div>
+    <div class="arrow-wrapper">
+      <div class="arrow" id="growing-arrow">⬅</div>
+      <div id="sphere"></div>
+    </div>
+  </div>
+</div>
+
+<div class="section sectionCredits">
+  <div class="credits-warning-bar">
+    Warning: Contains flashing lights and loud sounds that may trigger anxiety, panic, or seizures in sensitive viewers. Experience with care.
+  </div>
+
+  <div class="credits-content">
+    <div class="credits-left">
+      <div>
+        <div class="credits-title">I Have No Time for the Woods</div>
+        <div class="credits-author">Mattia Bellini</div>
+      </div>
+      <div class="credits-block">
+        <div>Devices:</div>
+        <ul>
+          <li>Meta Quest, Meta Quest 2, Meta Quest 3</li>
+        </ul>
+      </div>
+      <div>
+        <div class="supported-by-text">Supported by:</div>
+        <img src="../images/portfolio/kulka-logo.png"
+             alt="Cultural Endowment of Estonia Logo"
+             class="credits-logo">
+      </div>
+    </div>
+
+    <div class="credits-right">
+      <div class="credits-label" style="margin-bottom:2vw;">Credits:</div>
+      <div class="credits-block">
+        <div>3D Models:</div>
+        <ul>
+          <li>Acorn Bringer, AkuVain, CraftPix, Dm3d, Fertile Soil Productions, Makmiles, Poly Pizza, Quaternius</li>
+        </ul>
+      </div>
+      <div class="credits-block">
+        <div>Icons:</div>
+        <ul>
+          <li>AbtoCreative</li>
+        </ul>
+      </div>
+      <div class="credits-block">
+        <div>Sound Effects:</div>
+        <ul>
+          <li>Pixabay</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

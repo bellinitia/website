@@ -1,0 +1,71 @@
+.sectionTitle {
+  background: #090a13;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  left: 8vw;
+  top: 20vh;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.title {
+  font-size: 4em;
+  font-weight: 100;
+  margin-bottom: 0.2em;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.author {
+  margin-top: 2em;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #e2e2ef;
+}
+
+.desc {
+  margin-top: 1.2em;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #c4c8d2;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-align: justify;
+}
+
+.orbs-area {
+  position: absolute;
+  right: 10vw;
+  top: 28vh;
+  width: 60vw;
+  height: 50vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #e7f8ff 65%, #97c7d9 100%);
+  box-shadow: 0 0 40px 22px #d6f2ff, 0 0 20px 6px #cbeeff;
+  opacity: 0.92;
+  filter: blur(1.5px);
+}
+
+@media only screen and (orientation: portrait) {
+  .container {
+    max-width: 600px;
+  }
+  .title {
+    font-size: 5em;
+  }
+  .author,
+  .desc {
+    font-size: 2.5em;
+  }
+}

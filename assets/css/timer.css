@@ -1,0 +1,91 @@
+#timerSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@supports (height: 100svh) {
+  #timerSection { height: 100svh; }
+}
+
+/* Background zoom layer */
+#timerSection .bg-zoom-layer {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/portfolio/ihntftw/i-have-no-time-for-the-woods-3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1);
+  transform-origin: center center;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Timer content */
+.timer-section {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: red;
+  text-shadow: 0 0 5px #fccdcd;
+}
+
+#time {
+  transition: visibility 0s;
+}
+
+.arrow-wrapper {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.arrow {
+  font-size: 4rem;
+  transform-origin: center;
+  color: red;
+  text-shadow: 0 0 5px #fccdcd;
+  transition: box-shadow 80ms linear, text-shadow 80ms linear;
+}
+
+@media only screen and (orientation: portrait) {
+  .arrow { font-size: 8rem; }
+}
+
+.arrow.glow-pulse {
+  animation: arrowPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes arrowPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+/* Expanding sphere */
+#sphere {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 10;
+  transition: transform 80ms linear;
+}

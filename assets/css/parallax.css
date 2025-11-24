@@ -1,0 +1,97 @@
+.sectionMain {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Scene wrapper for Parallax.js */
+#scene {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Layers moved by Parallax.js */
+.parallax {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax p {
+  margin: 0;
+  text-align: center;
+  font-size: 12em;
+  transform: rotate(-6deg);
+  color: red;
+  text-shadow: 0 0 5px #fccdcd;
+}
+
+.layer1 p { font-size: 8em; }
+.layer2 p { font-size: 10em; }
+
+.img-container.parallax-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.parallax-bg-inner {
+  background: url('../images/portfolio/ihntftw/i-have-no-time-for-the-woods-1.jpg')
+             center center/cover no-repeat;
+  width: 105vw;
+  height: 105vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.motion-btn {
+  position: absolute;
+  bottom: 3vh;
+  right: 3vw;
+  padding: 0.6em 1.2em;
+  background: rgba(10,12,18,0.85);
+  color: #eaf6ff;
+  border: 1px solid #4e7fa3;
+  border-radius: 999px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 2.5em;
+  cursor: pointer;
+  z-index: 5;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .motion-btn { display: none; }
+}
