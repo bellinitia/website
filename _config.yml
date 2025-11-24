@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-UK"
-site_theme               : "air" # Currently available options are "default", "air"
+site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Mattia Bellini"
 title_separator          : "-"
 name                     : &name "Mattia Bellini"
@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "I deal with Complexity"
   location         : "France, Estonia"
-  employer         : "UTC Compiègne <br />Sorbonne University <br />University of Tartu"
+  employer         : "UTC Compiègne, <br />Sorbonne University <br />University of Tartu"
   uri              : # URL
   email            : "bellinitia@gmail.com" 
 

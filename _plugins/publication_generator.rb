@@ -85,6 +85,9 @@ module Jekyll
       # Excerpt: use abstract as excerpt if present
       data['excerpt'] = pub['abstract'] if pub['abstract']
 
+      # FIX: Put abstract into the main content body so it appears on the page
+      doc.content = pub['abstract'] if pub['abstract']
+
       doc.merge_data!(data)
       doc
     end

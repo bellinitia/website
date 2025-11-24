@@ -1,75 +1,570 @@
 ---
-title: "I Have No Time for the Woods - Mattia Bellini"
-excerpt: "A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity. <br/><img src='/images/portfolio/ihntftw/ihntftw_preview.png'>"
+title: "I Have No Time for the Woods"
+excerpt: "A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity. <br/><br /><img src='../images/portfolio/ihntftw/i-have-no-time-for-the-woods-preview.png'>"
 collection: portfolio
-
-page_css:
-  - /assets/css/ihntftw.css
-  - /assets/css/orbs.css
-  - /assets/css/parallax.css
-  - /assets/css/typing.css
-  - /assets/css/timer.css
-
-page_js:
-  - https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js
-  - /assets/js/orbs.js
-  - /assets/js/parallax.js
-  - /assets/js/typing.js
-  - /assets/js/timer_zoom.js
+layout: null
 ---
 
-<link rel="apple-touch-icon" sizes="180x180" href="../images/portfolio/ihntftw/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../images/portfolio/ihntftw/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../images/portfolio/ihntftw/favicon/favicon-16x16.png">
-<link rel="manifest" href="../images/portfolio/ihntftw/favicon/site.webmanifest">
 
-<div class="section sectionTitle">
-  <div class="container">
-    <div class="title">I Have No Time<br>for the Woods</div>
-    <div class="author">Mattia Bellini</div>
-    <div class="desc">
-      Inspired by Robert Frost’s poem <strong><em>Stopping by Woods on a Snowy Evening</em></strong>, this virtual reality experience represents the condition of overwork, where the pressure of self-imposed duties prevents the full enjoyment of small, passing pleasures. <strong>I Have No Time for the Woods</strong> plays with the mind of the interactor to reproduce the conflicting feelings of desire for a moment of serenity in restless days, and guilt when this serenity is finally found.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I Have No Time for the Woods - Mattia Bellini</title>
+    <meta name="description" content="A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity.">
+    
+    <!-- Zotero / Highwire Metadata -->
+    <meta name="citation_title" content="I Have No Time for the Woods">
+    <meta name="citation_author" content="Bellini, Mattia">
+    <meta name="citation_publication_date" content="2025">
+    <meta name="citation_language" content="en">
+
+    <!-- Dublin Core Metadata (For Reference Managers) -->
+    <meta name="DC.title" content="I Have No Time for the Woods">
+    <meta name="DC.creator" content="Bellini, Mattia">
+    <meta name="DC.date" content="2025">
+    <meta name="DC.type" content="Artwork">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.description" content="A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity.">
+    <meta name="DC.language" content="en">
+    <meta name="DC.rights" content="All rights reserved">
+
+    <!-- Social Media / Open Graph -->
+    <meta property="og:title" content="I Have No Time for the Woods">
+    <meta property="og:description" content="A VR experience inspired by Robert Frost's poems, exploring overwork and fleeting serenity.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bellinitia.me/portfolio/i-have-no-time-for-the-woods/">
+    <!-- Ensure this image path is correct relative to your site root -->
+    <meta property="og:image" content="https://bellinitia.me/images/portfolio/ihntftw/i-have-no-time-for-the-woods-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
+
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+        body {
+          height: 100vh;
+          overflow-y: auto;
+          scroll-snap-type: y mandatory;
+          background: #090a13;
+          color: #e7eaf1;
+          font-family: 'Montserrat', Arial, sans-serif;
+          font-size: 95%;
+        }
+        strong {
+          font-weight: 500;
+        }
+        .section {
+          width: 100vw;
+          height: 100vh;
+          scroll-snap-align: start;
+          position: relative;
+        }
+        /* Section 1 styles (fireflies and text) */
+        .sectionTitle {
+          background: #090a13;
+          position: relative;
+          overflow: hidden;
+        }
+        .container {
+          position: absolute;
+          left: 8vw;
+          top: 20vh;
+          z-index: 2;
+          max-width: 650px;
+        }
+        .title {
+          font-size: 4em;
+          font-weight: 100;
+          margin-bottom: 0.2em;
+          line-height: 1;
+          letter-spacing: 0.01em;
+        }
+        .author {
+          margin-top: 2em;
+          font-size: 1.1em;
+          font-weight: 400;
+          letter-spacing: 0.03em;
+          color: #e2e2ef;
+        }
+        .desc {
+          margin-top: 1.2em;
+          font-size: 1.1em;
+          font-weight: 300;
+          color: #c4c8d2;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          text-align: justify;
+        }
+        .orbs-area {
+          position: absolute;
+          right: 10vw;
+          top: 28vh;
+          width: 60vw;
+          height: 50vh;
+          pointer-events: none;
+          z-index: 1;
+        }
+        /* Orb and tail styles */
+        .orb {
+          position: absolute;
+          border-radius: 50%;
+          background: radial-gradient(circle at 40% 40%, #e7f8ff 65%, #97c7d9 100%);
+          box-shadow: 0 0 40px 22px #d6f2ff, 0 0 20px 6px #cbeeff;
+          opacity: 0.92;
+          filter: blur(1.5px);
+        }
+
+        @media only screen and (orientation: portrait) {
+          .container {
+            max-width: 600px;
+          }
+          .title {
+            font-size: 5em;
+          }
+          .author {
+            font-size: 2.5em;
+          }
+          .desc {
+            font-size: 2.5em;
+          }
+        }
+
+        /* Section 2 base styles */
+        .sectionMain {
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .img-container {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .img-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        /* Scene wrapper for parallax*/
+        #scene {
+          width: 100vw;
+          height: 100vh;
+          position: relative;
+          overflow: hidden;
+          transform-style: preserve-3d;
+          will-change: transform;
+        } 
+        /* Layer that Parallax.js moves */
+        .parallax {
+          position: absolute !important;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          will-change: transform;
+          
+          display: flex !important;
+          align-items: center;   /* vertical centering */
+          justify-content: center; /* horizontal centering */
+        }
+        .parallax p {
+          margin: 0;
+          text-align: center;
+          font-size: 12em;
+          transform: rotate(-6deg);
+          color: red;
+          text-shadow: 0px 0px 5px #fccdcd;
+        }
+        .layer1 p{
+          font-size: 8em;
+        }
+        .layer2 p{
+          font-size: 10em;
+        }
+        .img-container.parallax-bg {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          will-change: transform;
+        }
+        .parallax-bg-inner {
+          background: url('../images/portfolio/i-have-no-time-for-the-woods-1.jpg')
+                      center center/cover no-repeat;
+          width: 105vw;    /* make this larger/smaller as desired */
+          height: 105vh;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);  /* keeps center fixed */
+        }
+        @media only screen and (orientation: portrait) {
+          .parallax-bg-inner {
+            .layer1 p{
+              font-size: 15em;
+            }
+          }
+        }
+        .motion-btn {
+          position: absolute;
+          bottom: 3vh;
+          right: 3vw;
+          padding: 0.6em 1.2em;
+          background: rgba(10,12,18,0.85);
+          color: #eaf6ff;
+          border: 1px solid #4e7fa3;
+          border-radius: 999px;
+          font-family: Montserrat, Arial, sans-serif;
+          font-size: 2.5em;
+          cursor: pointer;
+          z-index: 5;
+        }
+        @media (hover: hover) and (pointer: fine) {
+          /* hide button on desktop if you want */
+          .motion-btn {
+            display: none;
+          }
+        }
+
+        #typing {
+          background: url('../images/portfolio/i-have-no-time-for-the-woods-2.jpg')
+                      center center/cover no-repeat;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+          color: #d8f8ff;
+          text-shadow:
+          0 0 15px #abf7fa,
+          0 0 27px #b3e7ff;
+          filter: blur(0.5px);
+        }
+        #typing p{
+          margin-top: -10%;
+        }
+        @media only screen and (orientation: portrait) {
+          /* hide button on desktop if you want */
+          #typing {
+            font-size: 2em;
+          }
+          #typing p{
+            margin-top: -35%;
+          }
+        }
+        #cursor {
+          display: inline-block;
+          margin-left: 2px;
+          animation: blink 0.9s steps(1) infinite;
+        }
+        @keyframes blink {
+          0%, 50%  { opacity: 1; }
+          50.01%,100% { opacity: 0; }
+        }
+        /* Outer section: full viewport, no zoom here */
+        #timerSection {
+          position: relative;
+          width: 100vw;
+          height: 100vh;          /* fallback */
+          overflow: hidden;
+        }
+        /* svh override where supported */
+        @supports (height: 100svh) {
+          #timerSection {
+            height: 100svh;
+          }
+        }
+        /* Background image layer that we will scale */
+        #timerSection .bg-zoom-layer {
+          position: absolute;
+          inset: 0;
+          background-image: url('../images/portfolio/i-have-no-time-for-the-woods-3.jpg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;     /* already cropped and covering on mobile */
+          transform: scale(1);        /* JS will animate this */
+          transform-origin: center center;
+          will-change: transform;
+          z-index: 0;
+        }
+        /* Timer content */
+        .timer-section {
+          position: relative;
+          z-index: 1;                 /* above bg-zoom-layer */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .timer-display {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          color: red;
+          text-shadow: 0px 0px 5px #fccdcd;
+        }
+        #time {
+          transition: visibility 0s;  /* instant on/off for blinking */
+        }
+        .arrow-wrapper {
+          width: 100vw;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+        .arrow {
+          font-size: 4rem;
+          transform-origin: center;
+          color: red;
+          text-shadow: 0px 0px 5px #fccdcd;
+          transition: box-shadow 80ms linear, text-shadow 80ms linear;
+        }
+        
+        @media only screen and (orientation: portrait) {
+        .arrow {
+            font-size: 8rem;
+          }
+        }
+        /* optional pulsing animation so glow breathes */
+        .arrow.glow-pulse {
+          animation: arrowPulse 1.2s infinite ease-in-out;
+        }
+        @keyframes arrowPulse {
+          0%, 100% { transform: scale(1); }
+          50%      { transform: scale(1.1); }
+        }
+        /* expanding sphere */
+        #sphere {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10vmin;
+          height: 10vmin;
+          border-radius: 50%;
+          background: rgba(255, 0, 0, 1);
+          transform: translate(-50%, -50%) scale(0);
+          transform-origin: center;
+          pointer-events: none;
+          z-index: 10;
+          transition: transform 80ms linear;
+        }
+
+
+        .sectionCredits {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          position: relative;
+          padding: 0;
+          font-weight: 100;
+        }
+
+        .credits-warning-bar {
+          width: 100vw;
+          font-size: 1.11em;
+          padding: 4vw 8vw;
+          box-sizing: border-box;
+          border-bottom: 1px solid #222;
+          letter-spacing: 0.01em;
+        }
+
+        .credits-content {
+          display: flex;
+          flex-direction: row;          /* 3 columns on desktop */
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 95vw;
+          margin: 2vw auto;
+          gap: 3vw;
+        }
+
+        /* Column 1: title + author */
+        .credits-intro {
+          flex: 1;
+          min-width: 220px;
+          font-size: 1em;
+          margin-top: 1vw;
+        }
+
+        .credits-title {
+          font-size: 2.5em;
+          line-height: 1.2;
+          margin-bottom: 0.8em;
+        }
+
+        .credits-author {
+          letter-spacing: 0.04em;
+          font-size: 1.5em;
+          padding-bottom: 2vh;
+        }
+
+        /* Column 2 */
+        .credits-left {
+          flex: 1;
+          min-width: 260px;
+          font-size: 1em;
+          display: flex;
+          flex-direction: column;
+          gap: 3vh;
+          margin-top: 1vw;
+        }
+
+        /* Column 3 */
+        .credits-right {
+          flex: 1;
+          min-width: 260px;
+          font-size: 1em;
+          display: flex;
+          flex-direction: column;
+          gap: 3vh;
+          margin-top: 1vw;
+        }
+
+        .credits-label {
+          margin-top: 2vw;
+          margin-left: 0;
+        }
+
+        .credits-block ul {
+          padding-left: 2em;
+          margin: 0.3em 0;
+        }
+
+        .credits-block li {
+          margin-bottom: 0.5em;
+          list-style-type: none;
+        }
+
+        .credits-block li:before {
+          content: "●";
+          margin-left: -1em;
+          margin-right: 0.5em;
+          color: white;
+          font-size: 1.7em;
+          text-shadow:
+            0 0 15px #abf7fa,
+            0 0 27px #b3e7ff;
+          filter: blur(0.3px);
+        }
+
+        .credits-support {
+          text-align: left;
+          margin-left: 5vw;
+          margin-bottom: 2vw;
+        }
+
+        .credits-logo {
+          margin-top: 2vw;
+          width: 420px;
+          max-width: 85vw;
+          display: block;
+        }
+
+        /* Mobile / portrait: stack columns */
+        @media only screen and (orientation: portrait) {
+          .sectionCredits {
+            font-size: 2em;
+          }
+
+          .credits-content {
+            display: block;
+            width: 80vw;
+          }
+
+          .credits-warning-bar {
+            padding: 8vw;
+          }
+
+          .credits-logo {
+            margin-bottom: 4vw;
+          }
+
+          .credits-intro,
+          .credits-left,
+          .credits-right {
+            width: auto;
+            min-width: 0;
+            margin-top: 4vw;
+          }
+        }
+
+      </style>
+</head>
+
+<body>
+  <!-- Section 1: Text + animated orbs -->
+  <div class="section sectionTitle">
+    <div class="container">
+      <div class="title">I Have No Time<br>for the Woods</div>
+      <div class="author">Mattia Bellini</div>
+      <div class="desc">
+        Inspired by Robert Frost’s poem <strong><em>Stopping by Woods on a Snowy Evening</em></strong>, this virtual reality experience represents the condition of overwork, where the pressure of self-imposed duties prevents the full enjoyment of small, passing pleasures. <strong>I Have No Time for the Woods</strong> plays with the mind of the interactor to reproduce the conflicting feelings of desire for a moment of serenity in restless days, and guilt when this serenity is finally found.
+      </div>
+    </div>
+    <div class="orbs-area" id="orbsArea" data-orbs="10"></div>
+  </div>
+
+  <!-- Section 2a: Parallax.js scene -->
+  <div class="section sectionMain sectionParallax">
+    <!-- Parallax.js scene -->
+    <div id="scene" data-relative-input="true" data-hover-only="true">
+      <!-- moving layers (foreground image) -->
+      <div class="img-container parallax" data-depth="0.05"><div class="parallax-bg-inner"></div></div>
+      <div class="parallax layer1" data-depth="0.1"><p>Deliver<br />by the <br />deadline</p></div>
+      <div class="parallax layer2" data-depth="0.2"><p>Deliver<br />by the <br />deadline</p></div>
+      <div class="parallax" data-depth="0.3"><p>Deliver<br />by the <br />deadline</p></div>
+    </div>
+    
+     <button id="enable-motion" class="motion-btn">Enable motion effects</button>
+  </div>
+
+  <!-- Section 2b: static fullscreen image -->
+  <div class="section sectionMain" id="typing">
+    <div class="img-container">
+      <p id="typingPar">WHOSE WOODS THESE ARE I THINK I KNOW</p>
+      <span id="cursor">|</span> 
     </div>
   </div>
-  <div class="orbs-area" id="orbsArea" data-orbs="10"></div>
-</div>
 
-<div class="section sectionMain sectionParallax">
-  <div id="scene" data-relative-input="true" data-hover-only="true">
-    <div class="img-container parallax" data-depth="0.05">
-      <div class="parallax-bg-inner"></div>
-    </div>
-    <div class="parallax layer1" data-depth="0.1"><p>Deliver<br>by the<br>deadline</p></div>
-    <div class="parallax layer2" data-depth="0.2"><p>Deliver<br>by the<br>deadline</p></div>
-    <div class="parallax" data-depth="0.3"><p>Deliver<br>by the<br>deadline</p></div>
-  </div>
-  <button id="enable-motion" class="motion-btn">Enable motion effects</button>
-</div>
+  <!-- Section 2c: another static fullscreen image -->
+  <div class="section sectionMain" id="timerSection">
+    <!-- zoomed background image layer -->
+    <div class="bg-zoom-layer"></div>
 
-<div class="section sectionMain" id="typing">
-  <div class="img-container">
-    <p id="typingPar">WHOSE WOODS THESE ARE I THINK I KNOW</p>
-    <span id="cursor">|</span>
-  </div>
-</div>
-
-<div class="section sectionMain" id="timerSection">
-  <div class="bg-zoom-layer"></div>
-  <div class="timer-section">
-    <div class="timer-display" id="time">00:10:000</div>
-    <div class="arrow-wrapper">
-      <div class="arrow" id="growing-arrow">⬅</div>
-      <div id="sphere"></div>
+    <div class="timer-section">
+      <div class="timer-display" id="time">00:10:000</div>
+      <div class="arrow-wrapper">
+        <div class="arrow" id="growing-arrow">⬅</div>
+        <div id="sphere"></div>
+      </div>
     </div>
   </div>
-</div>
 
+
+  <!-- Section 3: credits -->
 <div class="section sectionCredits">
   <div class="credits-warning-bar">
     Warning: Contains flashing lights and loud sounds that may trigger anxiety, panic, or seizures in sensitive viewers. Experience with care.
   </div>
 
   <div class="credits-content">
+
+    <!-- Column 2: devices + supporter (your old left column) -->
     <div class="credits-left">
       <div>
         <div class="credits-title">I Have No Time for the Woods</div>
@@ -84,11 +579,12 @@ page_js:
       <div>
         <div class="supported-by-text">Supported by:</div>
         <img src="../images/portfolio/kulka-logo.png"
-             alt="Cultural Endowment of Estonia Logo"
-             class="credits-logo">
+            alt="Cultural Endowment of Estonia Logo"
+            class="credits-logo">
       </div>
     </div>
 
+    <!-- Column 3: credits list (your old right column) -->
     <div class="credits-right">
       <div class="credits-label" style="margin-bottom:2vw;">Credits:</div>
       <div class="credits-block">
@@ -112,3 +608,336 @@ page_js:
     </div>
   </div>
 </div>
+
+
+  <!-- Parallax.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+
+  <script>
+    // Fireflies
+    const area = document.getElementById('orbsArea');
+
+    // Read count from HTML: data-orbs="…", default to 10 if missing/invalid
+    const orbCountAttr = area ? area.dataset.orbs : null;
+    const orbCount = Number.parseInt(orbCountAttr, 10) > 0
+      ? Number.parseInt(orbCountAttr, 10)
+      : 10;
+
+    const areaRect = area.getBoundingClientRect();
+    const areaW = area.offsetWidth;
+    const areaH = area.offsetHeight;
+
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    const orbs = [];
+    for (let i = 0; i < orbCount; i++) {
+      const orb = document.createElement('div');
+      orb.className = 'orb';
+      const size = rand(22, 54);
+      orb.style.width = size + 'px';
+      orb.style.height = size + 'px';
+
+      const tail = document.createElement('div');
+      tail.className = 'orb-tail';
+      tail.style.height = rand(22, 42) + 'px';
+      orb.appendChild(tail);
+
+      area.appendChild(orb);
+
+      orbs.push({
+        el: orb,
+        tail: tail,
+        size: size,
+        x: rand(-areaW * 0.4, areaW * 1.2),
+        y: rand(-areaH * 0.2, areaH * 1.2),
+        angle: rand(0, Math.PI * 2),
+        speed: rand(0.3, 1.1),
+        t: rand(0, 1000),
+        tailAngle: rand(15, 75),
+        roamX: rand(15, 60),
+        roamY: rand(20, 90)
+      });
+    }
+
+    function moveOrbs() {
+      orbs.forEach(o => {
+        o.t += o.speed * 0.8;
+        o.x += Math.cos(o.angle + Math.sin(o.t / 110)) * o.speed * 0.7 +
+              Math.sin(o.t / 100) * o.roamX * 0.001;
+        o.y += Math.sin(o.angle + Math.cos(o.t / 95)) * o.speed * 0.7 +
+              Math.cos(o.t / 107) * o.roamY * 0.001;
+
+        o.el.style.left = o.x + 'px';
+        o.el.style.top  = o.y + 'px';
+        o.tailAngle += rand(-2, 2);
+        o.tail.style.setProperty('--tail-rotation', o.tailAngle + 'deg');
+      });
+      requestAnimationFrame(moveOrbs);
+    }
+    moveOrbs();
+
+
+    // Parallax.js initialization
+    var scene = document.getElementById('scene');
+    var parallaxInstance = null;
+
+    function initParallax(options) {
+      if (!scene) return;
+      if (parallaxInstance) parallaxInstance.destroy();
+      parallaxInstance = new Parallax(scene, options || {
+        relativeInput: true,
+        hoverOnly: true
+      });
+    }
+
+    function isIOS13Plus() {
+      return typeof DeviceOrientationEvent !== 'undefined' &&
+            typeof DeviceOrientationEvent.requestPermission === 'function';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('enable-motion');
+
+      if (isIOS13Plus()) {
+        // iOS 13+ – show button, wait for explicit permission
+        if (btn) btn.style.display = 'block';
+
+        if (btn) {
+          btn.addEventListener('click', function () {
+            DeviceOrientationEvent.requestPermission()
+              .then(function (response) {
+                if (response === 'granted') {
+                  // Use gyroscope
+                  initParallax({
+                    relativeInput: false,  // let gyroscope drive it
+                    hoverOnly: false
+                  });
+                } else {
+                  // Fallback to mouse/touch
+                  initParallax({
+                    relativeInput: true,
+                    hoverOnly: true
+                  });
+                }
+                btn.style.display = 'none';
+              })
+              .catch(function () {
+                // Error: fallback to mouse/touch
+                initParallax({
+                  relativeInput: true,
+                  hoverOnly: true
+                });
+                btn.style.display = 'none';
+              });
+          });
+        }
+      } else {
+        // Non‑iOS or older iOS/desktop/Android – hide button and init immediately
+        if (btn) btn.style.display = 'none';
+        initParallax({
+          relativeInput: true,
+          hoverOnly: true
+        });
+      }
+    });
+    
+
+    // typing effect
+    var i = 0;
+    var speed = 100;
+    var typedOnce = false;
+
+    const typingEl = document.getElementById('typing');
+    const demoEl   = document.getElementById('typingPar');
+    const cursorEl = document.getElementById('cursor');
+
+    // Get text, excluding the cursor, then clear it but keep cursor
+    const fullText = demoEl.textContent.replace('|', '').trim();
+    demoEl.textContent = '';
+    demoEl.appendChild(cursorEl);
+
+    function typeWriter() {
+      if (i < fullText.length) {
+        demoEl.insertBefore(
+          document.createTextNode(fullText.charAt(i)),
+          cursorEl
+        );
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // Start when #typing comes into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !typedOnce) {
+          typedOnce = true;
+          typeWriter();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(typingEl);
+
+
+    // Timer and zoom
+    document.addEventListener('DOMContentLoaded', function () {
+    const durationMs    = 8_000;
+    const step          = 50;      // countdown tick
+    const totalVisualMs = 15_000;  // 10s countdown + ~2s blinks
+
+    const section   = document.getElementById('timerSection');
+    const timeEl    = document.getElementById('time');
+    const arrowEl   = document.getElementById('growing-arrow');
+    const sphereEl  = document.getElementById('sphere');
+    const bgLayerEl = section.querySelector('.bg-zoom-layer');
+
+    let remainingMs;
+    let started = false;
+
+    // visual timeline
+    let visualElapsedMs = 0;
+    let lastFrameTime = null;
+    let visualsDone = false;
+
+    // countdown/blink state
+    let countdownTimer = null;
+    let inBlinkPhase = false;
+
+    function formatTime(ms) {
+      const totalSeconds = Math.floor(ms / 1000);
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      const millis  = ms % 1000;
+      const m = String(minutes).padStart(2, '0');
+      const s = String(seconds).padStart(2, '0');
+      const msStr = String(millis).padStart(3, '0');
+      return `${m}:${s}:${msStr}`;
+    }
+
+    function applyVisuals(deltaMs) {
+      if (visualsDone) return;
+
+      visualElapsedMs += deltaMs;
+      if (visualElapsedMs >= totalVisualMs) {
+        visualElapsedMs = totalVisualMs;
+        visualsDone = true;
+      }
+
+      const p = visualElapsedMs / totalVisualMs; // 0 → 1
+
+      // Arrow glow
+      const minBlur = 4;
+      const maxBlur = 30;
+      const blur = minBlur + (maxBlur - minBlur) * p;
+      arrowEl.style.textShadow = `0 0 ${blur}px rgba(255,64,64,0.9)`;
+
+      // Background zoom via transform scale
+      const scaleStart = 1;
+      const scaleEnd   = 1.6;
+      const scale      = scaleStart + (scaleEnd - scaleStart) * p;
+      if (bgLayerEl) {
+        bgLayerEl.style.transform = `scale(${scale})`;
+      }
+    }
+
+    // Continuous visual loop
+    function visualsLoop(timestamp) {
+      if (lastFrameTime === null) lastFrameTime = timestamp;
+      const delta = timestamp - lastFrameTime;
+      lastFrameTime = timestamp;
+
+      applyVisuals(delta);
+
+      if (!visualsDone) {
+        requestAnimationFrame(visualsLoop);
+      }
+    }
+
+    function updateCountdown() {
+      if (remainingMs < 0) remainingMs = 0;
+
+      timeEl.textContent = formatTime(remainingMs);
+      timeEl.style.visibility = 'visible';
+
+      if (remainingMs === 0) {
+        clearInterval(countdownTimer);
+        startBlinkPhase();
+      } else {
+        remainingMs -= step;
+      }
+    }
+
+    function startBlinkPhase() {
+      inBlinkPhase = true;
+
+      const totalBlinks   = 10;    // 10 on/off = 5 full blinks
+      const blinkInterval = 200;
+      let count = 0;
+      let visible = true;
+
+      const blinkTimer = setInterval(() => {
+        visible = !visible;
+        timeEl.style.visibility = visible ? 'visible' : 'hidden';
+        count++;
+
+        if (count >= totalBlinks * 2) {
+          clearInterval(blinkTimer);
+          timeEl.style.visibility = 'visible';
+          startSpherePhase();
+        }
+      }, blinkInterval);
+    }
+
+    function startSpherePhase() {
+      const sphereDurationMs = 1_000;
+      const sphereStep = 40;
+      let elapsed = 0;
+
+      const sphereTimer = setInterval(() => {
+        elapsed += sphereStep;
+        if (elapsed > sphereDurationMs) elapsed = sphereDurationMs;
+
+        const t = elapsed / sphereDurationMs; // 0 → 1
+        const sphereScaleMin = 0.01;
+        const sphereScaleMax = 30;
+        const sphereScale =
+          sphereScaleMin + (sphereScaleMax - sphereScaleMin) * t;
+
+        sphereEl.style.transform =
+          `translate(-50%, -50%) scale(${sphereScale})`;
+
+        if (elapsed >= sphereDurationMs) {
+          clearInterval(sphereTimer);
+        }
+      }, sphereStep);
+    }
+
+    function startTimer() {
+      if (started) return;
+      started = true;
+      remainingMs = durationMs;
+
+      // start continuous visuals
+      requestAnimationFrame(visualsLoop);
+
+      // start countdown
+      updateCountdown();
+      countdownTimer = setInterval(updateCountdown, step);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) startTimer();
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(section);
+  });
+
+
+
+      </script>
+</body>
+

@@ -16,16 +16,22 @@ author_profile: true
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for group in site.publication_category %}
+    {% assign group_key = group[0] %}
+    {% assign group_data = group[1] %}
     {% assign title_shown = false %}
+    
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
+      <!-- CHECK: Is the post's category in the 'includes' list for this group? -->
+      {% unless group_data.includes contains post.category %}
         {% continue %}
-      {% endif %}
+      {% endunless %}
+      
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2>{{ group_data.title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
+      
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
