@@ -149,13 +149,13 @@ layout: default
 
 
       {% comment %}========== DISPLAY CITATION AND LINKS ========={% endcomment %}
-      <div class="citation-block" style="margin-top: 2em; padding: 1em; border-left: 4px solid #0066cc;">
-        <p style="font-size: smaller; margin-bottom: 0.5em;">
+      <div class="citation-block">
+        <p>
           <strong>Recommended citation:</strong><br>
           {{ auto_citation | strip }}
         </p>
         
-        <p style="font-size: smaller; margin-bottom: 0;">
+        <p>
           {% assign paper_url = page.pdf | default: page.paperurl %}
           
           {% if paper_url %}

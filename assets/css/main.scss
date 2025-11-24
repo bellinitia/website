@@ -41,3 +41,19 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+.author__avatar {
+  width: 100px;
+}
+.author__content {
+    vertical-align: middle;
+}
+.sidebar .author__name {
+    font-size: 1.5em;
+}
+.sidebar p, .sidebar li {
+    font-size: 1em;
+}
+.sidebar {
+    margin-bottom: 2em;
+}
