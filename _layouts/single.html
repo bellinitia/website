@@ -48,7 +48,7 @@ layout: default
         {{ content }}
 
       {% comment %}========== AUTO-GENERATE CITATION BY CATEGORY ========={% endcomment %}
-
+      
       {% comment %}Build author list once{% endcomment %}
       {% capture author_list %}
         {% if page.authors %}
@@ -149,41 +149,44 @@ layout: default
 
 
       {% comment %}========== DISPLAY CITATION AND LINKS ========={% endcomment %}
-      <div class="citation-block">
-        <p>
-          <strong>Recommended citation:</strong><br>
-          {{ auto_citation | strip }}
-        </p>
-        
-        <p>
-          {% assign paper_url = page.pdf | default: page.paperurl %}
+      
+      {% comment %}FIX: Corrected quotes and logic to show proper buttons{% endcomment %}
+      {% if page.collection == 'publications' %}
+        <div class="citation-block">
+          <p>
+            <strong>Recommended citation:</strong><br>
+            {{ auto_citation | strip }}
+          </p>
           
-          {% if paper_url %}
-            <a href="{{ paper_url }}" class="btn btn--small">
-              <i class="fa fa-file-pdf" aria-hidden="true"></i> Download Paper
-            </a>
-          {% endif %}
-          
-          {% if page.slidesurl %}
-            <a href="{{ page.slidesurl }}" class="btn btn--small">
-              <i class="fa fa-file-powerpoint" aria-hidden="true"></i> Download Slides
-            </a>
-          {% endif %}
-          
-          {% if page.bibtexurl %}
-            <a href="{{ page.bibtexurl }}" class="btn btn--small">
-              <i class="fa fa-quote-right" aria-hidden="true"></i> Download BibTeX
-            </a>
-          {% endif %}
-          
-          {% if page.doi %}
-            <a href="https://doi.org/{{ page.doi }}" class="btn btn--small">
-              <i class="fa fa-external-link" aria-hidden="true"></i> View at Publisher
-            </a>
-          {% endif %}
-        </p>
-      </div>
-
+          <p>
+            {% comment %}1. PDF Button{% endcomment %}
+            {% if page.pdf %}
+              <a href="{{ page.pdf }}" class="btn btn--small">
+                <i class="fa fa-file-pdf" aria-hidden="true"></i> Download PDF
+              </a>
+            {% endif %}
+            
+            {% comment %}2. External Link (PaperURL or DOI){% endcomment %}
+            {% if page.paperurl %}
+              <a href="{{ page.paperurl }}" class="btn btn--info btn--small">
+                <i class="fa fa-external-link" aria-hidden="true"></i> See the original
+              </a>
+            {% endif %}
+            
+            {% if page.slidesurl %}
+              <a href="{{ page.slidesurl }}" class="btn btn--small">
+                <i class="fa fa-file-powerpoint" aria-hidden="true"></i> Download Slides
+              </a>
+            {% endif %}
+            
+            {% if page.bibtexurl %}
+              <a href="{{ page.bibtexurl }}" class="btn btn--small">
+                <i class="fa fa-quote-right" aria-hidden="true"></i> Download BibTeX
+              </a>
+            {% endif %}
+          </p>
+        </div>
+      {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

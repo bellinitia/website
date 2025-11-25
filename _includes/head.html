@@ -30,6 +30,7 @@ Detect type and display label for publications
   {% endif %}
 {% endif %}
 
+
 {%- comment -%}
 Build the SEO title string based on collection
 {%- endcomment -%}
@@ -63,8 +64,7 @@ Build the SEO title string based on collection
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -76,110 +76,119 @@ Build the SEO title string based on collection
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
 
-<!-- Zotero Metadata -->
-{% if page.title %}
-<meta name="citation_title" content="{{ page.title | escape }}">
-<meta name="dc.title" content="{{ page.title | escape }}">
-{% endif %}
-
-{% if page.authors %}
-  {% for a in page.authors %}
-  <meta name="citation_author" content="{{ a | escape }}">
-  <meta name="dc.creator" content="{{ a | escape }}">
-  {% endfor %}
-{% endif %}
-
-{% if page.date %}
-<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
-<meta name="dc.date" content="{{ page.date | date_to_xmlschema }}">
-{% endif %}
-
-{% comment %}========== ITEM TYPE FOR REFERENCE MANAGERS ========={% endcomment %}
-{% if page.extra == 'thesis' %}
-  {% comment %}Special case: Thesis{% endcomment %}
-  <meta name="citation_type" content="thesis">
-  <meta name="dc.type" content="Thesis">
-  {% if page.venue %}
-    <meta name="citation_publisher" content="{{ page.venue | escape }}">
-    <meta name="citation_dissertation_institution" content="{{ page.venue | escape }}">
+<!-- Zotero Metadata (ONLY for Publications) -->
+{% if page.collection == 'publications' or page.collection == 'portfolio' %}
+  {% if page.title %}
+  <meta name="citation_title" content="{{ page.title | escape }}">
+  <meta name="dc.title" content="{{ page.title | escape }}">
   {% endif %}
-  
-{% elsif page.extra == 'chapter' %}
-  {% comment %}Special case: Book Chapter{% endcomment %}
-  <meta name="citation_type" content="chapter">
-  <meta name="dc.type" content="Book Chapter">
-  {% if page.book_title %}
-    <meta name="citation_book_title" content="{{ page.book_title | escape }}">
-  {% endif %}
-  {% if page.editors %}
-    {% for editor in page.editors %}
-    <meta name="citation_editor" content="{{ editor | escape }}">
+
+
+  {% if page.authors %}
+    {% for a in page.authors %}
+    <meta name="citation_author" content="{{ a | escape }}">
+    <meta name="dc.creator" content="{{ a | escape }}">
     {% endfor %}
   {% endif %}
-  {% if page.venue %}
-    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+
+
+  {% if page.date %}
+  <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  <meta name="dc.date" content="{{ page.date | date_to_xmlschema }}">
   {% endif %}
-  
-{% elsif page.category == 'books' %}
-  <meta name="citation_type" content="book">
-  <meta name="dc.type" content="Book">
-  {% if page.venue %}
-    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+
+
+  {% comment %}========== ITEM TYPE FOR REFERENCE MANAGERS ========={% endcomment %}
+  {% if page.extra == 'thesis' %}
+    {% comment %}Special case: Thesis{% endcomment %}
+    <meta name="citation_type" content="thesis">
+    <meta name="dc.type" content="Thesis">
+    {% if page.venue %}
+      <meta name="citation_publisher" content="{{ page.venue | escape }}">
+      <meta name="citation_dissertation_institution" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% elsif page.extra == 'chapter' %}
+    {% comment %}Special case: Book Chapter{% endcomment %}
+    <meta name="citation_type" content="chapter">
+    <meta name="dc.type" content="Book Chapter">
+    {% if page.book_title %}
+      <meta name="citation_book_title" content="{{ page.book_title | escape }}">
+    {% endif %}
+    {% if page.editors %}
+      {% for editor in page.editors %}
+      <meta name="citation_editor" content="{{ editor | escape }}">
+      {% endfor %}
+    {% endif %}
+    {% if page.venue %}
+      <meta name="citation_publisher" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% elsif page.category == 'books' %}
+    <meta name="citation_type" content="book">
+    <meta name="dc.type" content="Book">
+    {% if page.venue %}
+      <meta name="citation_publisher" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% elsif page.category == 'journal' %}
+    <meta name="citation_type" content="journal_article">
+    <meta name="dc.type" content="Article">
+    {% if page.venue %}
+      <meta name="citation_journal_title" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% elsif page.category == 'conference' %}
+    <meta name="citation_type" content="conference_paper">
+    <meta name="dc.type" content="Conference Paper">
+    {% if page.venue %}
+      <meta name="citation_conference_title" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% elsif page.category == 'other' %}
+    <meta name="citation_type" content="preprint">
+    <meta name="dc.type" content="Preprint">
+    {% if page.venue %}
+      <meta name="citation_publisher" content="{{ page.venue | escape }}">
+    {% endif %}
+    
+  {% else %}
+    {% comment %}Fallback for uncategorized items{% endcomment %}
+    <meta name="citation_type" content="article">
+    <meta name="dc.type" content="Article">
+    {% if page.venue %}
+      <meta name="citation_publisher" content="{{ page.venue | escape }}">
+    {% endif %}
   {% endif %}
-  
-{% elsif page.category == 'journal' %}
-  <meta name="citation_type" content="journal_article">
-  <meta name="dc.type" content="Article">
-  {% if page.venue %}
-    <meta name="citation_journal_title" content="{{ page.venue | escape }}">
+
+
+  {% if page.volume %}<meta name="citation_volume" content="{{ page.volume | escape }}">{% endif %}
+  {% if page.issue %}<meta name="citation_issue" content="{{ page.issue | escape }}">{% endif %}
+  {% if page.firstpage %}<meta name="citation_firstpage" content="{{ page.firstpage | escape }}">{% endif %}
+  {% if page.lastpage %}<meta name="citation_lastpage" content="{{ page.lastpage | escape }}">{% endif %}
+
+
+  {% if page.doi %}
+  <meta name="citation_doi" content="{{ page.doi | escape }}">
+  <meta name="dc.identifier" content="doi:{{ page.doi | escape }}">
   {% endif %}
-  
-{% elsif page.category == 'conference' %}
-  <meta name="citation_type" content="conference_paper">
-  <meta name="dc.type" content="Conference Paper">
-  {% if page.venue %}
-    <meta name="citation_conference_title" content="{{ page.venue | escape }}">
+
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta name="citation_public_url" content="{{ page.url | absolute_url }}">
+
+
+  {% if page.pdf %}
+  <meta name="citation_pdf_url" content="{{ page.pdf | absolute_url }}">
   {% endif %}
-  
-{% elsif page.category == 'other' %}
-  <meta name="citation_type" content="preprint">
-  <meta name="dc.type" content="Preprint">
-  {% if page.venue %}
-    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+
+
+  {% if page.abstract %}
+  <meta name="citation_abstract" content="{{ page.abstract | strip_html | normalize_whitespace | escape }}">
   {% endif %}
-  
-{% else %}
-  {% comment %}Fallback for uncategorized items{% endcomment %}
-  <meta name="citation_type" content="article">
-  <meta name="dc.type" content="Article">
-  {% if page.venue %}
-    <meta name="citation_publisher" content="{{ page.venue | escape }}">
+
+
+  {% if page.language %}
+  <meta name="citation_language" content="{{ page.language | escape }}">
   {% endif %}
-{% endif %}
-
-
-
-{% if page.volume %}<meta name="citation_volume" content="{{ page.volume | escape }}">{% endif %}
-{% if page.issue %}<meta name="citation_issue" content="{{ page.issue | escape }}">{% endif %}
-{% if page.firstpage %}<meta name="citation_firstpage" content="{{ page.firstpage | escape }}">{% endif %}
-{% if page.lastpage %}<meta name="citation_lastpage" content="{{ page.lastpage | escape }}">{% endif %}
-
-{% if page.doi %}
-<meta name="citation_doi" content="{{ page.doi | escape }}">
-<meta name="dc.identifier" content="doi:{{ page.doi | escape }}">
-{% endif %}
-
-<link rel="canonical" href="{{ page.url | absolute_url }}">
-<meta name="citation_public_url" content="{{ page.url | absolute_url }}">
-
-{% if page.pdf %}
-<meta name="citation_pdf_url" content="{{ page.pdf | absolute_url }}">
-{% endif %}
-
-{% if page.abstract %}
-<meta name="citation_abstract" content="{{ page.abstract | strip_html | normalize_whitespace | escape }}">
-{% endif %}
-
-{% if page.language %}
-<meta name="citation_language" content="{{ page.language | escape }}">
 {% endif %}

@@ -56,9 +56,17 @@ module Jekyll
       data['firstpage'] = firstpage
       data['lastpage']  = lastpage
 
-      # DOI, URL
+      # --- FIX START: URL and DOI Handling ---
       data['doi'] = pub['DOI']
-      data['url'] = pub['URL']
+      
+      # 1. Check for explicit URL (Uppercase key from your JSON)
+      if pub['URL']
+        data['paperurl'] = pub['URL']
+      # 2. Fallback: if no URL but DOI exists, create a DOI link
+      elsif pub['DOI']
+        data['paperurl'] = "https://doi.org/#{pub['DOI']}"
+      end
+      # --- FIX END ---
 
       # Abstract & language
       data['abstract'] = pub['abstract']
@@ -71,12 +79,13 @@ module Jekyll
       data['book_title'] = book_title if book_title
       data['editors']    = editors   if editors && !editors.empty?
 
-      # PDF from Extra / note
-      pdf_url = extract_pdf_url(pub['note'] || pub['extra'])
+      # --- FIX START: PDF Extraction ---
+      # Check both 'note' and 'extra' fields combined to ensure we don't miss it
+      pdf_url = extract_pdf_url(pub['note'], pub['extra'])
       data['pdf'] = pdf_url if pdf_url
+      # --- FIX END ---
 
       # Layout and standard front matter fields
-      #data['layout']          = 'default'  # your publication layout is "layout: default"
       data['collection']      = 'publications'
       data['author_profile']  = true
       data['share']           = true
@@ -85,7 +94,7 @@ module Jekyll
       # Excerpt: use abstract as excerpt if present
       data['excerpt'] = pub['abstract'] if pub['abstract']
 
-      # FIX: Put abstract into the main content body so it appears on the page
+      # Put abstract into the main content body so it appears on the page
       doc.content = pub['abstract'] if pub['abstract']
 
       doc.merge_data!(data)
@@ -113,7 +122,7 @@ module Jekyll
 
     def map_type_and_extras(pub)
       csl_type = pub['type']
-      cat  = 'other'
+      cat   = 'other'
       extra = nil
       book_title = nil
       editors = nil
@@ -144,13 +153,17 @@ module Jekyll
       [cat, extra, book_title, editors]
     end
 
-    def extract_pdf_url(extra_field)
-      return nil unless extra_field.is_a?(String)
-      extra_field.each_line do |line|
-        if line.strip.start_with?('PDF:')
-          return line.sub('PDF:', '').strip
-        end
+    # UPDATED: Helper to extract PDF from either note or extra
+    def extract_pdf_url(note_field, extra_field)
+      # Combine them into one string to search
+      search_text = [note_field, extra_field].compact.join("\n")
+      
+      # Regex to find "PDF:" followed by the path
+      # This handles cases where PDF is on the second line of the note
+      if match = search_text.match(/PDF:\s*(.+)$/)
+        return match[1].strip
       end
+      
       nil
     end
   end
