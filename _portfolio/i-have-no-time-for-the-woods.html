@@ -137,16 +137,16 @@ layout: blank
 
         @media only screen and (orientation: portrait) {
           .container {
-            max-width: 600px;
+            max-width: 70vw;
           }
           .title {
-            font-size: 5em;
+            font-size: 7vw;
           }
           .author {
-            font-size: 2.5em;
+            font-size: 4vw;
           }
           .desc {
-            font-size: 2.5em;
+            font-size: 4vw;
           }
         }
 
@@ -199,16 +199,16 @@ layout: blank
         .parallax p {
           margin: 0;
           text-align: center;
-          font-size: 12em;
+          font-size: 12vw;
           transform: rotate(-6deg);
           color: red;
           text-shadow: 0px 0px 5px #fccdcd;
         }
         .layer1 p{
-          font-size: 8em;
+          font-size: 8vw;
         }
         .layer2 p{
-          font-size: 10em;
+          font-size: 10vw;
         }
         .img-container.parallax-bg {
           position: absolute;
@@ -233,6 +233,15 @@ layout: blank
             .layer1 p{
               font-size: 15em;
             }
+          }
+          .parallax p {
+          font-size: 20vw;
+          }
+          .layer1 p{
+            font-size: 12vw;
+          }
+          .layer2 p{
+            font-size: 15vw;
           }
         }
         .motion-btn {
@@ -273,7 +282,7 @@ layout: blank
         @media only screen and (orientation: portrait) {
           /* hide button on desktop if you want */
           #typing {
-            font-size: 2em;
+            font-size: 3vw;
           }
           #typing p{
             margin-top: -35%;
@@ -389,7 +398,7 @@ layout: blank
 
         .credits-warning-bar {
           width: 100vw;
-          font-size: 1.11em;
+          font-size: 1.2vw;
           padding: 4vw 8vw;
           box-sizing: border-box;
           border-bottom: 1px solid #222;
@@ -410,19 +419,19 @@ layout: blank
         .credits-intro {
           flex: 1;
           min-width: 220px;
-          font-size: 1em;
+          font-size: 1vw;
           margin-top: 1vw;
         }
 
         .credits-title {
-          font-size: 2.5em;
+          font-size: 2.5vw;
           line-height: 1.2;
           margin-bottom: 0.8em;
         }
 
         .credits-author {
           letter-spacing: 0.04em;
-          font-size: 1.5em;
+          font-size: 1.5vw;
           padding-bottom: 2vh;
         }
 
@@ -430,7 +439,7 @@ layout: blank
         .credits-left {
           flex: 1;
           min-width: 260px;
-          font-size: 1em;
+          font-size: 1vw;
           display: flex;
           flex-direction: column;
           gap: 3vh;
@@ -441,7 +450,7 @@ layout: blank
         .credits-right {
           flex: 1;
           min-width: 260px;
-          font-size: 1em;
+          font-size: 1vw;
           display: flex;
           flex-direction: column;
           gap: 3vh;
@@ -468,7 +477,7 @@ layout: blank
           margin-left: -1em;
           margin-right: 0.5em;
           color: white;
-          font-size: 1.7em;
+          font-size: 1.7vw;
           text-shadow:
             0 0 15px #abf7fa,
             0 0 27px #b3e7ff;
@@ -484,14 +493,14 @@ layout: blank
         .credits-logo {
           margin-top: 2vw;
           width: 420px;
-          max-width: 85vw;
+          max-width: 50vw;
           display: block;
         }
 
         /* Mobile / portrait: stack columns */
         @media only screen and (orientation: portrait) {
           .sectionCredits {
-            font-size: 2em;
+            font-size: 2vw;
           }
 
           .credits-content {
@@ -501,10 +510,19 @@ layout: blank
 
           .credits-warning-bar {
             padding: 8vw;
+            font-size: 3vw;
           }
 
           .credits-logo {
             margin-bottom: 4vw;
+          }
+
+          .credits-author {
+            font-size: 4vw;
+          }
+
+          .credits-title {
+            font-size: 5vw;
           }
 
           .credits-intro,
@@ -513,7 +531,13 @@ layout: blank
             width: auto;
             min-width: 0;
             margin-top: 4vw;
+            font-size: 3vw;
           }
+
+          .credits-block li:before {
+            font-size: 4vw;
+          }
+
         }
 
       </style>
@@ -590,7 +614,7 @@ layout: blank
       <div class="credits-block">
         <div>Devices:</div>
         <ul>
-          <li>Meta Quest, Meta Quest 2, Meta Quest 3, tred</li>
+          <li>Meta Quest, Meta Quest 2, Meta Quest 3</li>
         </ul>
       </div>
       <div>
