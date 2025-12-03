@@ -608,5 +608,86 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/8KX94I2Z",
+		"type": "paper-conference",
+		"abstract": "Interactive Digital Narratives (IDNs) have been long considered potential solutions to the issue of accessibly representing complex topics in a cognitively manageable way. This review article is aimed at investigating the affordances IDNs offer for representing and making complex issues accessible, as discussed in the relative academic literature. This review analysed the entirety of the proceedings of the International Conference on Interactive Digital Storytelling (ICIDS) and related texts, for a span of 28 years. From the analysis of the 126 selected publications, 10 macro-topics emerged, namely: Participation, Model complexity, Increased engagement and motivation, Multi-user capacity, Narrative, Adaptability, Multimodality, Structuring thinking, Replayability, and Caveats. These topics are discussed in relation to what they entail for the accessible representation of complexity through IDNs.",
+		"container-title": "Interactive Storytelling",
+		"DOI": "10.1007/978-3-032-12408-1_6",
+		"event-place": "Cham",
+		"ISBN": "978-3-032-12408-1",
+		"language": "en",
+		"note": "PDF: /files/publications/bellini-2026-interactive-digital-narratives-to-represent-complexity-a-review.pdf",
+		"page": "81-103",
+		"publisher": "Springer Nature Switzerland",
+		"publisher-place": "Cham",
+		"source": "Springer Link",
+		"title": "Interactive Digital Narratives to Represent Complexity: A Review",
+		"title-short": "Interactive Digital Narratives to Represent Complexity",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"editor": [
+			{
+				"family": "Reyes",
+				"given": "María Cecilia"
+			},
+			{
+				"family": "Nack",
+				"given": "Frank"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/HQFQS9M7",
+		"type": "chapter",
+		"abstract": "This chapter examines the video game Lies of P (loosely based on Carlo Collodi’s Pinocchio) focusing on its depiction of the posthuman body. We argue that the game makes use of a vast array of Victorian tropes, and that it is precisely through these Victorian elements (to be found in themes, aesthetics, and settings) that the discourse on the posthuman body is articulated. Through the analysis of the game’s Victorian influences, we want to frame contemporary posthumanist concerns as already ingrained in Victorian cultural and scientific contexts. The chapter’s main focus is on matters of the body, its relationship with new technologies, its possible alterations, its deviance, and its connection with the human mind. We discuss how Lies of P explores the posthuman body and situates it in a Victorian context by paying attention to three main aspects: how the game depicts and re-interprets the London Great Exhibition (body and technology), the presence of bodily metamorphoses inspired by Victorian literary works (body and mutations), and the representation of the main character’s half puppet half human body (body and hybridity). We contend that through its Victorian influences, the game foregrounds body-centred posthumanist concerns increasingly relevant also for today’s society.",
+		"container-title": "Victorians and Videogames",
+		"event-place": "New York",
+		"ISBN": "978-1-003-49899-5",
+		"note": "number-of-pages: 16\nPDF: /files/publications/bellini-2025-lies-of-p-victorian-posthuman-and-metamorphic-bodies.pdf\nDOI: 10.4324/9781003498995",
+		"publisher": "Routledge",
+		"publisher-place": "New York",
+		"title": "Lies of P: Victorian Posthuman and Metamorphic Bodies",
+		"title-short": "Lies of P",
+		"URL": "https://www.taylorfrancis.com/chapters/edit/10.4324/9781003498995-21/lies-francesca-arnavas-mattia-bellini",
+		"author": [
+			{
+				"family": "Arnavas",
+				"given": "Francesca"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"editor": [
+			{
+				"family": "Young",
+				"given": "Lin"
+			},
+			{
+				"family": "Cameron",
+				"given": "Brooke"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025"
+				]
+			]
+		}
 	}
 ]
