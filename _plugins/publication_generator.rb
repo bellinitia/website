@@ -37,8 +37,11 @@ module Jekyll
       data['title'] = pub['title']
 
       # Authors: "Family, Given"
-      if pub['author']
-        data['authors'] = pub['author'].map { |a|
+      # Prefer 'author', but fallback to 'container-author' if author is missing
+      author_list = pub['author'] || pub['container-author']
+      
+      if author_list
+        data['authors'] = author_list.map { |a|
           [a['family'], a['given']].compact.join(', ')
         }
       end
@@ -47,7 +50,20 @@ module Jekyll
       data['date'] = parse_date(pub['issued'])
 
       # Venue / publisher / container
-      data['venue'] = pub['container-title'] || pub['publisher']
+      if pub['type'] == 'chapter'
+        # For chapters, "venue" should be the Publisher (e.g., Routledge)
+        data['venue'] = pub['publisher']
+
+        # DEBUG: Force the output to tell us what it sees
+        if publisher && !publisher.empty?
+           data['venue'] = publisher
+        else
+           data['venue'] = "DEBUG: Publisher is EMPTY. Container is: #{container}"
+
+      else
+        # For everything else, keep the existing logic
+        data['venue'] = pub['container-title'] || pub['publisher']
+      end
 
       # Volume / issue / pages
       data['volume']    = pub['volume']
@@ -120,7 +136,7 @@ module Jekyll
       [first, last]
     end
 
-    def map_type_and_extras(pub)
+      def map_type_and_extras(pub)
       csl_type = pub['type']
       cat   = 'other'
       extra = nil
@@ -135,23 +151,23 @@ module Jekyll
       when 'paper-conference'
         cat = 'conference'
       when 'chapter'
-        cat   = 'books'
-        extra = 'chapter'
+        cat   = 'chapter'
         book_title = pub['container-title']
+        
+        # Explicitly fetch editors
         if pub['editor']
           editors = pub['editor'].map { |e|
-            [e['family'], e['given']].compact.join(', ')
+            [e['given'], e['family']].compact.join(' ') # e.g. "Lin Young"
           }
         end
       when 'thesis'
         cat   = 'books'
         extra = 'thesis'
-      else
-        cat = 'other'
       end
 
       [cat, extra, book_title, editors]
     end
+
 
     # UPDATED: Helper to extract PDF from either note or extra
     def extract_pdf_url(note_field, extra_field)
