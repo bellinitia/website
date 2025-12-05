@@ -51,15 +51,16 @@ module Jekyll
 
       # Venue / publisher / container
       if pub['type'] == 'chapter'
-        # For chapters, "venue" should be the Publisher (e.g., Routledge)
-        data['venue'] = pub['publisher']
+        # Define variables explicitly for the debug check
+        publisher = pub['publisher']
+        container = pub['container-title']
 
         # DEBUG: Force the output to tell us what it sees
         if publisher && !publisher.empty?
            data['venue'] = publisher
         else
            data['venue'] = "DEBUG: Publisher is EMPTY. Container is: #{container}"
-
+        end
       else
         # For everything else, keep the existing logic
         data['venue'] = pub['container-title'] || pub['publisher']
