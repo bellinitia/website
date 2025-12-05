@@ -103,7 +103,7 @@ layout: default
             DOI: <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
           {% endif %}
           
-        {% elsif page.extra == 'chapter' %}
+        {% elsif page.category == 'chapter' %}
           {% comment %}========== BOOK CHAPTER FORMAT ========={% endcomment %}
           {{ author_list | strip }} ({{ year }}). {{ page.title }}. In {{ editor_list | strip }}, <i>{{ page.book_title }}</i>{% if page.firstpage and page.lastpage %} (pp. {{ page.firstpage }}-{{ page.lastpage }}){% endif %}. {{ page.venue }}.
           {% if page.doi %}
