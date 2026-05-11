@@ -4,15 +4,20 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+
 <p>
-  You can find here my piblications on video games, narratives, complexity, and related fields.retest
+  You can find here my publications on video games, narratives, complexity, and related fields.
 </p>
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.
+  </div>
 {% endif %}
 
 {% include base_path %}
+
+{% assign sorted_publications = site.publications | sort: "date" | reverse %}
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
@@ -20,26 +25,22 @@ author_profile: true
     {% assign group_key = group[0] %}
     {% assign group_data = group[1] %}
     {% assign title_shown = false %}
-    
-    {% for post in site.publications reversed %}
-      <!-- CHECK: Is the post's category in the 'includes' list for this group? -->
+
+    {% for post in sorted_publications %}
       {% unless group_data.includes contains post.category %}
         {% continue %}
       {% endunless %}
-      
+
       {% unless title_shown %}
         <h2>{{ group_data.title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      
+
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
+  {% for post in sorted_publications %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-

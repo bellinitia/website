@@ -4,7 +4,6 @@
 		"type": "paper-conference",
 		"abstract": "Different have been the attempts to use Procedural Content Generation via Machine Learning in game development. Among the others, some researchers have tried to adapt a game, or some part of it, to the user playing it. This approach has been called “adaptive game design”. Contrarily to what it may seem, apparently the most interesting findings in this field have been made for drama managers, i.e. for the artificial intelligences that procedurally generate story flow. The paper takes the move from what seems to be a missing in current literature and it is aimed at proposing and discussing a possible procedural content generation via machine learning model that takes the latest approaches in machine learning applied to drama managers and combine them with findings from adaptive game design. The objective of the proposed model is to give players the best possible gaming experience of a highly branched game, depending on their attitudes towards the gaming world.",
 		"container-title": "CEUR Workshop Proceedings",
-		"event-place": "Padova, Italy",
 		"event-title": "Proceedings of 3rd Workshop on Games-Human Interaction (GHItaly 2019) co-located with CHItaly 2019 – Biannual conference on Computer-Human Interaction",
 		"language": "English",
 		"note": "PDF: /files/publications/bellini-2019-towards-a-model-to-meet-players-preferences-in-games.pdf",
@@ -31,7 +30,6 @@
 		"type": "paper-conference",
 		"abstract": "User interfaces are substantial parts of the gamer’s experience, but they are not only showing useful information to the player. Indeed, they can also be used to transmit narrative elements, even if sometimes only under the form of the “mood” of the game. Since interfaces can be used to enhance storytelling, their design should be aware of issues of narrative theory. The suspension of disbelief is probably the main cognitive mechanism to be considered, that is the process of both knowing and forgetting that what is happening in a game is fictional. The equilibrium between those two sides is precarious. This is why all the narrative elements have to be created to keep the balance: user interfaces are not excluded. In this paper, the focus of the analysis is the possible contribution of interfaces to the storytelling, and the contribution of narrative theory in game design, particularly regarding the suspension of disbelief.",
 		"container-title": "CEUR Workshop Proceedings",
-		"event-place": "Castiglione della Pescaia, Italy",
 		"event-title": "Proceedings of 2nd Workshop on Games-Human Interaction (GHItaly 2018) co-located with AVI 2018 - International Working Conference on Advanced Visual Interfaces",
 		"language": "English",
 		"note": "PDF: /files/publications/bellini-2018-the-impact-of-user-interfaces-for-the-enhancement-of-narrative-elements-of-a-video-game.pdf",
@@ -98,10 +96,10 @@
 		"abstract": "Ethical choices are a feature present in a number of video games that gives players the ability to test their ethical values.\nHowever, ethical choices are not always driven by rationality or ethical thinking in video games: immersion, gameplay design\ndecisions, and flow sometimes help developers nudge players’ actions. We argue that understanding how choices are framed\nwithin the complex expressive medium \"video game\" and how immersion deriving from expressive complexity plays into that\nframing does foster our comprehension of the dynamics of choices in diverse contexts, in particular of morally charged\nchoices. Furthermore, game designers’ decisions regarding gameplay mechanics, and particularly default choices, highly\nimpact on the behaviors expected by designers in different situations, and on the resulting perception of such expectations in\nthe mind of the player. Lastly we argue that the loss of self-consciousness afforded by imaginative immersion and gameflow\n[15] leads to de-empathizing ethical thinking in moral-oriented choice-making in video games. Employing Bizzocchi and\nTanenbaum’s [4,5] close-reading techniques, we reflect on the implication of these aspects on players’ ethical choice-making,\nand how the architectures of a game mirror, generate or enhance different behaviors regarding moral decisions. Quantic\nDreams’ Detroit: Become Human will be used to address our questions.",
 		"collection-title": "CEUR Workshop Proceedings",
 		"container-title": "Joint Proceedings of 4th Workshop on Games-Human Interaction (GHItaly21) & 1st Workshop on Multi-party Interaction in eXtended Reality (MIXR)",
-		"event-place": "Bolzano (Italy), July",
 		"event-title": "Games-Human Interaction (GHItaly21) and  Multi-party Interaction in eXtended Reality (MIXR)",
+		"ISSN": "1613-0073",
 		"language": "en",
-		"note": "ISSN: 1613-0073\nPDF: /files/publications/meier-bellini-2021-framing-the-dilemma-the-influence-of-immersion-in-ethical-choice-making.pdf",
+		"note": "PDF: /files/publications/meier-bellini-2021-framing-the-dilemma-the-influence-of-immersion-in-ethical-choice-making.pdf",
 		"publisher": "CEUR",
 		"publisher-place": "Bolzano (Italy), July",
 		"source": "CEUR Workshop Proceedings",
@@ -215,8 +213,9 @@
 		"DOI": "10.1080/13614568.2022.2150324",
 		"ISSN": "1361-4568",
 		"issue": "0",
-		"note": "publisher: Taylor & Francis\n_eprint: https://doi.org/10.1080/13614568.2022.2150324\nPDF: /files/publications/barbara-et-al-2023-the-sacra-infermeria-a-focus-group-evaluation-of-an-augmented-reality-cultural-heritage-experience.pdf",
+		"note": "_eprint: https://doi.org/10.1080/13614568.2022.2150324\nPDF: /files/publications/barbara-et-al-2023-the-sacra-infermeria-a-focus-group-evaluation-of-an-augmented-reality-cultural-heritage-experience.pdf",
 		"page": "1-29",
+		"publisher": "Taylor & Francis",
 		"source": "Taylor and Francis+NEJM",
 		"title": "The Sacra Infermeria - a focus group evaluation of an augmented reality cultural heritage experience",
 		"URL": "https://doi.org/10.1080/13614568.2022.2150324",
@@ -276,7 +275,7 @@
 		"publisher": "arXiv",
 		"source": "arXiv.org",
 		"title": "INDCOR White Paper 2: Interactive Narrative Design for Representing Complexity",
-		"URL": "https://arxiv.org/pdf/2305.01925",
+		"URL": "https://arxiv.org/abs/2305.01925",
 		"author": [
 			{
 				"family": "Perkis",
@@ -401,7 +400,6 @@
 		"collection-title": "GoodIT '23",
 		"container-title": "Proceedings of the 2023 ACM Conference on Information Technology for Social Good",
 		"DOI": "10.1145/3582515.3609539",
-		"event-place": "New York, NY, USA",
 		"ISBN": "979-8-4007-0116-0",
 		"note": "PDF: /files/publications/bellini-2023-validating-video-games-as-complex-artifacts.pdf",
 		"page": "233–236",
@@ -446,7 +444,7 @@
 		"source": "journals.lib.unb.ca",
 		"title": "Miyazaki's Hybrid Worlds and Their Riddle-Stories: Western Tropes and Kishōtenketsu",
 		"title-short": "Miyazaki's Hybrid Worlds and Their Riddle-Stories",
-		"URL": "https://journals.lib.unb.ca/index.php/NW/article/view/33773",
+		"URL": "https://journals.lib.unb.ca/index.php/NW/article/view/33553",
 		"volume": "12",
 		"author": [
 			{
@@ -484,8 +482,9 @@
 		"container-title": "Marvels & Tales",
 		"ISSN": "1536-1802",
 		"issue": "2",
-		"note": "publisher: Wayne State University Press\nPDF: /files/publications/bellini-2024-fairy-tale-bodies-and-embodying-the-fairy-tale-in-telltale-games-the-wolf-among-us.pdf",
+		"note": "PDF: /files/publications/bellini-2024-fairy-tale-bodies-and-embodying-the-fairy-tale-in-telltale-games-the-wolf-among-us.pdf",
 		"page": "287-302",
+		"publisher": "Wayne State University Press",
 		"source": "Project MUSE",
 		"title": "Fairy-Tale Bodies and Embodying the Fairy Tale in Telltale Games' The Wolf Among Us",
 		"URL": "https://muse.jhu.edu/pub/27/article/923686",
@@ -577,9 +576,12 @@
 	{
 		"id": "http://zotero.org/users/6955108/items/5ZQVQADE",
 		"type": "thesis",
-		"abstract": "What makes video games such powerful narrative media? My research explores how the interplay between games and players creates rich, complex experiences. By examining the ways in which video games narratives are organised, and how players collaboratively construct them, I uncover the mechanisms that make video game narratives so fascinating. In the first part of my work, I unpack the ingredients of compelling video game narratives. I show how certain storytelling techniques spark specific emotional and cognitive reactions in players, offering insights that could help game designers craft richer, more meaningful narratives. Next, I delve into the dynamic relationship between games and players as they collaborate to the sensemaking. This collaboration, I argue, behaves like a complex system, where countless interactions build something greater than the sum of its parts. In the final section, I bring these two threads together: the complexity of narratives and the complexity of sensemaking. I demonstrate how the two interact to produce the rich, multifaceted experiences we encounter in video games. Finally, I show how games can ease our mental workload by relying on cognitive shortcuts revealed by brain science. My findings have broad implications, touching on fields like narratology, media and game studies, game design, and beyond, and they open exciting possibilities for using video games to better represent and explore the complexity of our world.",
+		"abstract": "What makes video games such powerful narrative media? This research explores how the interplay between games and players creates rich, complex experiences. By examining the ways in which video games narratives are organised, and how players collaboratively construct them, I uncover the mechanisms that make video game narratives so fascinating. In the first part of my work, I unpack the ingredients of compelling video game narratives. I show how certain storytelling techniques spark specific emotional and cognitive reactions in players, offering insights that could help game designers craft richer, more meaningful narratives. Next, I delve into the dynamic relationship between games and players as they collaborate to the sensemaking. This collaboration, I argue, behaves like a complex system, where countless interactions build something greater than the sum of its parts. In the final section, I bring these two threads together: the complexity of narratives and the complexity of sensemaking. I demonstrate how the two interact to produce the rich, multifaceted experiences we encounter in video games. Finally, I show how games can ease our mental workload by relying on cognitive shortcuts revealed by brain science. My findings have broad implications, touching on fields like narratology, media and game studies, game design, and beyond, and they open exciting possibilities for using video games to better represent and explore the complexity of our world.",
+		"DOI": "10.13140/RG.2.2.15971.46887",
+		"ISBN": "978-9916-27-878-9",
+		"ISSN": "1406-913X",
 		"language": "en",
-		"note": "DOI: 10.13140/RG.2.2.15971.46887\nISBN: 9789916278789\nISSN: 1406-913X\nPDF: /files/publications/bellini-2025-video-games-narratives-and-complexity.pdf",
+		"note": "PDF: /files/publications/bellini-2025-video-games-narratives-and-complexity.pdf",
 		"publisher": "University of Tartu Press",
 		"source": "dspace.ut.ee",
 		"title": "Video Games, Narratives, and Complexity",
@@ -615,7 +617,6 @@
 		"abstract": "Interactive Digital Narratives (IDNs) have been long considered potential solutions to the issue of accessibly representing complex topics in a cognitively manageable way. This review article is aimed at investigating the affordances IDNs offer for representing and making complex issues accessible, as discussed in the relative academic literature. This review analysed the entirety of the proceedings of the International Conference on Interactive Digital Storytelling (ICIDS) and related texts, for a span of 28 years. From the analysis of the 126 selected publications, 10 macro-topics emerged, namely: Participation, Model complexity, Increased engagement and motivation, Multi-user capacity, Narrative, Adaptability, Multimodality, Structuring thinking, Replayability, and Caveats. These topics are discussed in relation to what they entail for the accessible representation of complexity through IDNs.",
 		"container-title": "Interactive Storytelling",
 		"DOI": "10.1007/978-3-032-12408-1_6",
-		"event-place": "Cham",
 		"ISBN": "978-3-032-12408-1",
 		"language": "en",
 		"note": "PDF: /files/publications/bellini-2026-interactive-digital-narratives-to-represent-complexity-a-review.pdf",
@@ -654,9 +655,9 @@
 		"type": "chapter",
 		"abstract": "This chapter examines the video game Lies of P (loosely based on Carlo Collodi’s Pinocchio) focusing on its depiction of the posthuman body. We argue that the game makes use of a vast array of Victorian tropes, and that it is precisely through these Victorian elements (to be found in themes, aesthetics, and settings) that the discourse on the posthuman body is articulated. Through the analysis of the game’s Victorian influences, we want to frame contemporary posthumanist concerns as already ingrained in Victorian cultural and scientific contexts. The chapter’s main focus is on matters of the body, its relationship with new technologies, its possible alterations, its deviance, and its connection with the human mind. We discuss how Lies of P explores the posthuman body and situates it in a Victorian context by paying attention to three main aspects: how the game depicts and re-interprets the London Great Exhibition (body and technology), the presence of bodily metamorphoses inspired by Victorian literary works (body and mutations), and the representation of the main character’s half puppet half human body (body and hybridity). We contend that through its Victorian influences, the game foregrounds body-centred posthumanist concerns increasingly relevant also for today’s society.",
 		"container-title": "Victorians and Videogames",
-		"event-place": "New York",
+		"DOI": "10.4324/9781003498995",
 		"ISBN": "978-1-003-49899-5",
-		"note": "number-of-pages: 16\nPDF: /files/publications/bellini-2025-lies-of-p-victorian-posthuman-and-metamorphic-bodies.pdf\nDOI: 10.4324/9781003498995",
+		"note": "number-of-pages: 16\nPDF: /files/publications/arnavas-bellini-2025-lies-of-p-victorian-posthuman-and-metamorphic-bodies.pdf",
 		"publisher": "Routledge",
 		"publisher-place": "New York",
 		"title": "Lies of P: Victorian Posthuman and Metamorphic Bodies",
@@ -686,6 +687,46 @@
 			"date-parts": [
 				[
 					"2025"
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/6955108/items/QZ4AT3S9",
+		"type": "article-journal",
+		"container-title": "Italian Studies",
+		"DOI": "10.1080/00751634.2024.2333129",
+		"ISSN": "0075-1634",
+		"issue": "1",
+		"note": "_eprint: https://doi.org/10.1080/00751634.2024.2333129\ntype: other",
+		"page": "100-101",
+		"publisher": "Routledge",
+		"source": "Taylor and Francis+NEJM",
+		"title": "Narrative Strategies for Participation in Dante’s ‘Divine Comedy’: by Katherine Powlesland, Oxford, Legenda, 2022, 186 pp., £85 (hardback), ISBN 978-1-83954-037-0",
+		"title-short": "Narrative Strategies for Participation in Dante’s ‘Divine Comedy’",
+		"URL": "https://doi.org/10.1080/00751634.2024.2333129",
+		"volume": "79",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					12,
+					17
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					1,
+					2
 				]
 			]
 		}
