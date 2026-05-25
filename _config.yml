@@ -165,6 +165,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - _headers
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

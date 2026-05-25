@@ -55,7 +55,7 @@
     {% comment %}
       UPDATED LINK LOGIC
       1. Show citation if available
-      2. Show "Download Paper" (PDF)
+      2. Show embargo text or "Download PDF" if embargo period is ended
       3. Show "See the Original" (DOI/External Link)
       4. Show other resources (Slides, BibTeX)
     {% endcomment %}
@@ -65,8 +65,24 @@
     {% endif %}
 
     <p class="archive__item-links">
+
+      
+      {% comment %} PDF with embargo logic {% endcomment %}
       {% if post.pdf %}
-        <a href="{{ post.pdf }}" class="btn btn--primary btn--small"><i class="fas fa-file-pdf"></i> Download PDF</a>
+        {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
+        {% assign pub_seconds = post.date | date: '%s' | plus: 0 %}
+        {% assign seconds_diff = now_seconds | minus: pub_seconds %}
+        {% if post.embargo_months %}
+          {% assign embargo_seconds = post.embargo_months | times: 2592000 %}
+        {% else %}
+          {% assign embargo_seconds = 31536000 %}
+        {% endif %}
+
+        {% if seconds_diff > embargo_seconds %}
+          <a href="{{ post.pdf }}" class="btn btn--success btn--small"><i class="fas fa-file-pdf"></i> Download PDF</a>
+        {% else %}
+          <span class="btn btn--danger btn--small" title="Under publisher embargo"><a href="mailto:{{ site.author.email }}" style="color:white"><i class="fas fa-lock"></i> Under embargo - write me for a copy</a></span>
+        {% endif %}
       {% endif %}
 
       {% if post.paperurl %}

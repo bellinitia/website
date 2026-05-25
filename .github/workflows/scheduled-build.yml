@@ -1,0 +1,16 @@
+name: Scheduled Netlify Build
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every Monday. 
+    # This means your embargoes will update weekly.
+    - cron: '0 0 * * 1'
+  workflow_dispatch: 
+    # This allows you to manually run it from the GitHub Actions tab if needed
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Netlify Build Hook
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}

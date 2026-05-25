@@ -121,6 +121,10 @@ module Jekyll
       pdf_url = note_fields['pdf']
       data['pdf'] = pdf_url if pdf_url
 
+      # Embargo duration in months (defaults to 12 if not set)
+      embargo_months = note_fields['embargo']
+      data['embargo_months'] = embargo_months.to_i if embargo_months
+
       # Layout and standard front matter fields
       data['collection']      = 'publications'
       data['author_profile']  = true

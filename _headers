@@ -1,0 +1,22 @@
+---
+layout: none
+permalink: /_headers
+---
+
+
+{% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
+{% for post in site.publications %}
+  {% if post.pdf %}
+    {% assign pub_seconds = post.date | date: '%s' | plus: 0 %}
+    {% assign seconds_diff = now_seconds | minus: pub_seconds %}
+    {% if post.embargo_months %}
+      {% assign embargo_seconds = post.embargo_months | times: 2592000 %}
+    {% else %}
+      {% assign embargo_seconds = 31536000 %}
+    {% endif %}
+    {% if seconds_diff <= embargo_seconds %}
+{{ post.pdf }}
+  X-Robots-Tag: noindex, nofollow
+    {% endif %}
+  {% endif %}
+{% endfor %}
