@@ -17,8 +17,11 @@ main:
    # - title: "Teaching"
    #  url: /teaching/    
     
-  - title: "Other Works"
-    url: /portfolio/
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Creative Practice"
+    url: /creative-practice/
         
   # - title: "Blog Posts"
   #   url: /year-archive/

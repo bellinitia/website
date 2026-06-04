@@ -228,12 +228,15 @@ collections:
   publications:
     output: true
     permalink: /:collection/:year-:title/
-  portfolio:
-    output: true
-    permalink: /:collection/:title/
   talks:
     output: true
     permalink: /:collection/:title/
+  creative:         # NEW
+    output: true
+    permalink: /creative-practice/:path/
+  projects:         # NEW
+    output: true
+    permalink: /projects/:path/
 
 
 # These settings control how pages and collections are included in the site

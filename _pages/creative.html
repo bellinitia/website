@@ -1,0 +1,21 @@
+---
+layout: archive
+title: "Creative Practice"
+permalink: /creative-practice/
+author_profile: true
+---
+
+
+
+<p>
+  You can find here information on my completed and ongoing creative and artistic projects.
+</p>
+
+
+{% include base_path %}
+
+
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}
+
