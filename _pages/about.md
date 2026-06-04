@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a postdoctoral researcher working at the intersection of comparative literature, cognitive science, and computer science. Currently, I hold dual positions at the [Université de Technologie de Compiègne - Sorbonne Alliance Université](https://costech.utc.fr/membres/bellini-mattia) as a Postdoctoral Researcher, where I work on narrative design for augmented reality experiences in Holocaust museums, and at the [University of Tartu](https://ut.ee/en/employee/mattia-bellini) where I am managing two Knowledge Transfer Projects: [ARDIN Design Studio: Interactive Narratives for Social Good](https://designstudio.ardin.online), and [AcademicLens.ai]().
+I'm a postdoctoral researcher working at the intersection of comparative literature, cognitive science, and computer science. Currently, I hold dual positions at the [Université de Technologie de Compiègne - Sorbonne Alliance Université](https://costech.utc.fr/membres/bellini-mattia) as a Postdoctoral Researcher, where I work on narrative design for augmented reality experiences in Holocaust museums, and at the [University of Tartu](https://ut.ee/en/employee/mattia-bellini) where I am managing two Knowledge Transfer Projects: [ARDIN Design Studio: Interactive Narratives for Social Good](https://designstudio.ardin.online), and [AcademicLens.ai](https://academiclens.ai).
 
 My research explores how interactive digital narratives (particularly video games and mixed reality experiences) can represent and communicate complexity. I'm interested in understanding how narrative  shapes cognition and vice versa, and how we can harness these insights for social good, from science communication to supporting democracy.​
 
