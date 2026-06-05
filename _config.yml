@@ -294,6 +294,24 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # _creative
+  - scope:
+      path: ""
+      type: creative
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 
 # Sass/SCSS
