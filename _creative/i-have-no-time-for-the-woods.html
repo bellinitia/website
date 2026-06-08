@@ -42,8 +42,6 @@ layout: blank
   <meta property="og:image" content="https://bellinitia.me/images/portfolio/ihntftw/i-have-no-time-for-the-woods-preview.png">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600" rel="stylesheet">
-
   <!-- Legacy / Fallback (Include this first) -->
   <link rel="icon" href="/images/portfolio/ihntftw/favicon/favicon.ico">
   <!-- Modern browsers-->
@@ -65,6 +63,55 @@ layout: blank
     gtag('config', 'G-MCY6XM20CM');
   </script>
   
+<!-- Define custom fonts -->
+  <style>
+    /* montserrat-200 - latin */
+    @font-face {
+      font-display: block;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      src: url('/assets/fonts/montserrat-v31-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* montserrat-regular - latin */
+    @font-face {
+      font-display: block;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* montserrat-600 - latin */
+    @font-face {
+      font-display: block; 
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      src: url('/assets/fonts/montserrat-v31-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+  </style>
+
+  <!-- Preload the fonts -->
+  <link rel="preload" href="/assets/fonts/montserrat-v31-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-v31-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-v31-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- ensure fonts are loaded before showing the page-->
+  <style>
+    body { opacity: 0; transition: opacity 0.2s ease; }
+  </style>
+  <script>
+    var fontTimeout = setTimeout(function() {
+      document.body.style.opacity = '1';
+    }, 1000);
+
+    document.fonts.ready.then(function() {
+      clearTimeout(fontTimeout);
+      document.body.style.opacity = '1';
+    });
+  </script>
+
+
     <style>
         html, body {
           margin: 0;
