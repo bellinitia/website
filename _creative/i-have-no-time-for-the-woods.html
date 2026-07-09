@@ -113,6 +113,36 @@ layout: blank
 
 
     <style>
+        
+        body {
+          --sb-track-color: #090a13;
+          --sb-thumb-color: #9b9c9c;
+          --sb-size: 10px;
+        }
+
+        body::-webkit-scrollbar {
+          width: var(--sb-size)
+        }
+
+        body::-webkit-scrollbar-track {
+          background: var(--sb-track-color);
+          border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+          background: var(--sb-thumb-color);
+          border-radius: 5px;
+          border: 2px solid #232E33;
+        }
+
+        @supports not selector(::-webkit-scrollbar) {
+          body {
+            scrollbar-color: var(--sb-thumb-color)
+                            var(--sb-track-color);
+          }
+        }
+
+
         html, body {
           margin: 0;
           padding: 0;
@@ -881,9 +911,9 @@ layout: blank
 
     // Timer and zoom
     document.addEventListener('DOMContentLoaded', function () {
-    const durationMs    = 5_000;
+    const durationMs    = 4_000;
     const step          = 50;      // countdown tick
-    const totalVisualMs = 15_000;  // 10s countdown + ~2s blinks
+    const totalVisualMs = 10_000;  // 10s countdown + ~2s blinks
 
     const section   = document.getElementById('timerSection');
     const timeEl    = document.getElementById('time');
@@ -970,7 +1000,7 @@ layout: blank
     function startBlinkPhase() {
       inBlinkPhase = true;
 
-      const totalBlinks   = 10;    // 10 on/off = 5 full blinks
+      const totalBlinks   = 6;    // 10 on/off = 5 full blinks
       const blinkInterval = 200;
       let count = 0;
       let visible = true;
