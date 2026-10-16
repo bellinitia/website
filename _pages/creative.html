@@ -14,6 +14,7 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.creative reversed %}
+{% assign sorted_creative = site.creative | sort: "project_date" | reverse %}
+{% for post in sorted_creative %}
   {% include archive-single.html %}
 {% endfor %}

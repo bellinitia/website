@@ -6,11 +6,34 @@ author_profile: true
 ---
 
 <p>
-  You can find here information on my completed and ongoing projects.
+  You can find here information on my ongoing and past projects, alongside selected student collaborations.
 </p>
 
 {% include base_path %}
 
-{% for post in site.projects reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign dated_projects = site.projects | where_exp: "project", "project.project_date" %}
+{% assign sorted_projects = dated_projects | sort: "project_date" | reverse %}
+{% assign ongoing_projects = sorted_projects | where: "status", "ongoing" %}
+{% assign past_projects = sorted_projects | where: "status", "past" %}
+{% assign supervised_projects = site.projects | where: "project_type", "supervised" | sort: "title" %}
+
+{% if ongoing_projects.size > 0 %}
+  <h2>Ongoing</h2>
+  {% for post in ongoing_projects %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
+
+{% if past_projects.size > 0 %}
+  <h2>Past</h2>
+  {% for post in past_projects %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
+
+{% if supervised_projects.size > 0 %}
+  <h2>Selected Student Projects</h2>
+  {% for post in supervised_projects %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
