@@ -1,7 +1,7 @@
 ---
 title: "ITS-STORY: Mixed-Reality Narratives at Compiègne-Royallieu"
 excerpt: "An ANR-funded project exploring mixed reality for memory work at internment and deportation sites in Nazi Europe."
-project_date: "2025-09"
+project_date: "2025-12"
 status: ongoing
 collection: projects
 published: true
