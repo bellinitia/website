@@ -1,42 +1,52 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+{% capture author_list %}
+  {% if post.authors.size == 1 %}
+    {{ post.authors[0] }}
+  {% elsif post.authors.size == 2 %}
+    {{ post.authors[0] }} and {{ post.authors[1] }}
+  {% else %}
+    {% for author in post.authors %}
+      {% if forloop.last %}
+        and {{ author }}
+      {% elsif forloop.first %}
+        {{ author }}
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        {{ author }},
       {% endif %}
-    </h3>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endfor %}
+  {% endif %}
+{% endcapture %}
+
+<li class="cv-publication">
+  <p>
+    {% if author_list != blank %}{{ author_list | strip }} {% endif %}({{ post.date | date: "%Y" }}).
+    {% if post.extra == 'thesis' or post.category == 'books' %}
+      <i><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></i>.
+    {% else %}
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>.
     {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
-    </li>
- </article>
-</div>
+    {% if post.extra == 'chapter' or post.category == 'chapter' %}
+      {% if post.editors.size == 1 %}
+        In {{ post.editors[0] }} (Ed.),
+      {% elsif post.editors.size == 2 %}
+        In {{ post.editors[0] }} &amp; {{ post.editors[1] }} (Eds.),
+      {% elsif post.editors.size > 2 %}
+        In {{ post.editors | join: ", " }} (Eds.),
+      {% else %}
+        In
+      {% endif %}
+      <i>{{ post.book_title }}</i>{% if post.firstpage and post.lastpage %} (pp. {{ post.firstpage }}-{{ post.lastpage }}){% endif %}. {{ post.venue }}.
+    {% elsif post.extra == 'thesis' %}
+      {% if post.thesis_type %}{{ post.thesis_type }}{% else %}PhD Thesis{% endif %}, {{ post.venue }}.
+    {% elsif post.category == 'books' %}
+      {{ post.venue }}.
+    {% elsif post.category == 'journal' %}
+      <i>{{ post.venue }}</i>{% if post.volume %}, {{ post.volume }}{% endif %}{% if post.issue %}({{ post.issue }}){% endif %}{% if post.firstpage and post.lastpage %}, {{ post.firstpage }}-{{ post.lastpage }}{% elsif post.firstpage %}, {{ post.firstpage }}{% endif %}.
+    {% elsif post.category == 'conference' %}
+      In <i>{{ post.venue }}</i>{% if post.firstpage and post.lastpage %}, pp. {{ post.firstpage }}-{{ post.lastpage }}{% elsif post.firstpage %}, p. {{ post.firstpage }}{% endif %}.
+    {% else %}
+      {% if post.venue %}<i>{{ post.venue }}</i>.{% endif %}
+    {% endif %}
+  </p>
+</li>

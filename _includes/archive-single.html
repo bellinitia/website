@@ -79,7 +79,7 @@
         {% endif %}
 
         {% if seconds_diff > embargo_seconds %}
-          <a href="{{ post.pdf }}" class="btn btn--success btn--small"><i class="fas fa-file-pdf"></i> Download PDF</a>
+          <a href="{{ post.pdf }}" class="btn btn--success btn--small"><i class="fas fa-file-pdf"></i> full text pdf</a>
         {% else %}
           <span class="btn btn--danger btn--small" title="Under publisher embargo"><a href="mailto:{{ site.author.email }}" style="color:white"><i class="fas fa-lock"></i> Under embargo - write me for a copy</a></span>
         {% endif %}

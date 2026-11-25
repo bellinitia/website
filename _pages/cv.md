@@ -62,9 +62,10 @@ Service and leadership
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  {% assign sorted_cv_publications = site.publications | sort: "date" | reverse %}
+  <ol class="cv-publications">{% for post in sorted_cv_publications %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ol>
   
 {% comment %} 
 

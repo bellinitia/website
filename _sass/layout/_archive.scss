@@ -66,6 +66,20 @@
   }
 }
 
+.cv-publications {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.cv-publication {
+  margin-bottom: 0.5em;
+
+  p {
+    margin: 0;
+  }
+}
+
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;

@@ -789,5 +789,259 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "arnavasetal2026MindWanderingAttention",
+		"type": "book",
+		"abstract": "Is a wandering mind just a defocused mind? Or can wandering also be a creative mental activity? What is the complex relationship between mind wandering and attention? How is this relationship articulated when we encounter a fictional world? And does our mind pay attention and wander in the same way when the encountered fictional world comes from a book versus a digital artefact? These are some of the questions this monograph seeks to address.\nCo-authored by a cognitive psychologist, a literary scholar, and a video game scholar, this book provides an interdisciplinary perspective on mind wandering and attention, focusing on how these cognitive processes work in the reception of fictional worlds. Building on cutting-edge research, this volume proposes a three-directional exchange, showing how interdisciplinary dialogue can suggest previously unseen avenues of theoretical and empirical exploration.\nThis innovative book will appeal to scholars in cognitive science, literary studies, cognitive neuroscience, game studies, cognitive narratology, psychology, and narrative theory.",
+		"citation-key": "arnavasetal2026MindWanderingAttention",
+		"ISBN": "978-1-003-58924-2",
+		"note": "PDF: /files/publications/arnavas-et-al-2026-mind-wandering-attention-and-the-reception-of-fictional-worlds.pdf",
+		"number-of-pages": "144",
+		"publisher": "Routledge",
+		"publisher-place": "New York",
+		"title": "Mind Wandering, Attention, and the Reception of Fictional Worlds",
+		"author": [
+			{
+				"family": "Arnavas",
+				"given": "Francesca"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Németh",
+				"given": "Dezső"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					12,
+					18
+				]
+			]
+		}
+	},
+	{
+		"id": "zulkiflietal2027EmotionalDesignGuidance",
+		"type": "paper-conference",
+		"abstract": "Emotions play a central role in Interactive Digital Narratives, serving both as catalysts for the interactive experience and as key determinants of their success. The objective of this study is to systematically analyse interactor-emotion terms reported in the IDN academic literature and, based on this analysis, to derive emotional design guidance for IDNs. Through a systematic mapping study, we identified 74 publications that report interactor-emotion terms and synthesized the emotional design guidance for achieving the corresponding interactor emotional experiences. The main contribution of this paper is the first dictionary of interactor-emotion terms, which maps interactor-emotion terms to literature-driven emotional design guidance for IDNs.",
+		"citation-key": "zulkiflietal2027EmotionalDesignGuidance",
+		"container-title": "Interactive Storytelling",
+		"DOI": "10.1007/978-3-032-46125-4_39",
+		"ISBN": "978-3-032-46125-4",
+		"language": "en",
+		"note": "PDF: /files/publications/zulkifli-et-al-2027-emotional-design-guidance-for-interactive-digital-narratives-a-systematic-mapping-study.pdf",
+		"page": "550-566",
+		"publisher": "Springer Nature Switzerland",
+		"publisher-place": "Cham",
+		"source": "Springer Link",
+		"title": "Emotional Design Guidance for Interactive Digital Narratives: A Systematic Mapping Study",
+		"title-short": "Emotional Design Guidance for Interactive Digital Narratives",
+		"author": [
+			{
+				"family": "Zulkifli",
+				"given": "Syazwanie Filzah"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Taveter",
+				"given": "Kuldar"
+			}
+		],
+		"editor": [
+			{
+				"family": "Mitchell",
+				"given": "Alex"
+			},
+			{
+				"family": "Holloway-Attaway",
+				"given": "Lissa"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2027"
+				]
+			]
+		}
+	},
+	{
+		"id": "bellinietal2027ReclaimingEmpathy",
+		"type": "paper-conference",
+		"abstract": "Virtual and Extended Reality have been popularly framed as the “ultimate empathy machine”, a formulation that has proven remarkably durable in industry and public discourse despite sustained scholarly critique. This paper argues that this framing rests on a conceptual confusion: it collapses empathy into something closer to emotional contagion or projected identification. Tracing a targeted genealogy of the concept of Empathy from the German aesthetic tradition through its extension to social sciences and history, we show that empathy was never conceived as an experience of merging with another but as a precarious, self-aware act of projection that presupposes and preserves the irreducible distance between self and other. We examine how VR and XR marketing and popular discourse eroded this structure, and how scholars in media studies, journalism ethics, and Interactive Digital Narrative research have identified the risks that result from the marketable distortion of empathy. Finally, we argue that recovering the original philosophical structure of empathy, rather than abandoning the concept in its entirety, offers a more productive theoretical foundation for designing VR and XR experiences intended to represent the condition of others, particularly in memorial and historically sensitive contexts, where the concept of historical empathy already operationalizes this notion for pedagogical use.",
+		"citation-key": "bellinietal2027ReclaimingEmpathy",
+		"container-title": "Interactive Storytelling",
+		"DOI": "10.1007/978-3-032-46128-5_1",
+		"ISBN": "978-3-032-46128-5",
+		"language": "en",
+		"note": "PDF: /files/publications/bellini-et-al-2027-reclaiming-empathy.pdf",
+		"page": "1-9",
+		"publisher": "Springer Nature Switzerland",
+		"publisher-place": "Cham",
+		"source": "Springer Link",
+		"title": "Reclaiming Empathy",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Bachimont",
+				"given": "Bruno"
+			},
+			{
+				"family": "Lourdeaux",
+				"given": "Domitile"
+			},
+			{
+				"family": "Bouchardon",
+				"given": "Serge"
+			},
+			{
+				"family": "Lenne",
+				"given": "Dominique"
+			}
+		],
+		"editor": [
+			{
+				"family": "Mitchell",
+				"given": "Alex"
+			},
+			{
+				"family": "Holloway-Attaway",
+				"given": "Lissa"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2027"
+				]
+			]
+		}
+	},
+	{
+		"id": "bellinietal2027RepresentingMixedReality",
+		"type": "paper-conference",
+		"abstract": "The transmission of historical memory poses a fundamental challenge in the contemporary era: how can we engage with a past that no longer has living witnesses, whose material traces are fading, and whose complexity resists simple narrativization? This challenge is especially visible in cases such as Nazi internment and transit camps of the Second World War, where the ethical stakes of representation are high and the risk of trivializing immense human suffering is ever present. This paper presents a reflection on the representational affordances of Mixed Reality (MR) Interactive Digital Narratives (IDNs). More specifically, we propose a typology of representational approaches that can be adopted in IDN design for Memorial Work to foster contextual, perspectival, and affective comprehension. We discuss how these representational approaches apply to MR IDNs focused on representing the Nazi crimes of the Second World War, which benefits each approach provides, and which drawbacks each might present. Within each approach we present a prototype scenario developed by the project consortium for the same historical event, simultaneously exemplifying the employment of the typology and reflecting on its use. The article stems from and is inserted within the framework of an experimental project aimed at exploring MR IDNs to represent life in the Royallieu-Compiègne internment camp (Frontstalag 122), now Mémorial de l’Internement et de la Déportation - Camp de Royallieu in Compiègne, France.",
+		"citation-key": "bellinietal2027RepresentingMixedReality",
+		"container-title": "Interactive Storytelling",
+		"DOI": "10.1007/978-3-032-46128-5_2",
+		"ISBN": "978-3-032-46128-5",
+		"language": "en",
+		"note": "PDF: /files/publications/bellini-et-al-2027-representing-the-past-in-mixed-reality-mimesis-indexicality-and-metaphoricity-for-memorial-works.pdf",
+		"page": "10-26",
+		"publisher": "Springer Nature Switzerland",
+		"publisher-place": "Cham",
+		"source": "Springer Link",
+		"title": "Representing the Past in Mixed Reality: Mimesis, Indexicality, and Metaphoricity for Memorial Works",
+		"title-short": "Representing the Past in Mixed Reality",
+		"author": [
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Lourdeaux",
+				"given": "Domitile"
+			},
+			{
+				"family": "Bachimont",
+				"given": "Bruno"
+			},
+			{
+				"family": "Bouchardon",
+				"given": "Serge"
+			},
+			{
+				"family": "Lenne",
+				"given": "Dominique"
+			},
+			{
+				"family": "Monje",
+				"given": "Robin"
+			}
+		],
+		"editor": [
+			{
+				"family": "Mitchell",
+				"given": "Alex"
+			},
+			{
+				"family": "Holloway-Attaway",
+				"given": "Lissa"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2027"
+				]
+			]
+		}
+	},
+	{
+		"id": "kurjamaaetal2027IDNSocialWorkers",
+		"type": "paper-conference",
+		"abstract": "Newly graduated social workers are often expected to handle emotionally complex client meetings within months of entering practice, despite limited opportunities for rehearsal during formal education. This exploratory Research through Design study examines what experienced practitioners identify as the possibilities and limitations of Interactive Digital Narratives (IDNs) for such rehearsal. A domain-specific prototype built in the recently restored ASAPS Builder modelled a single early concern-report case, from initial notification to the first encounter with the family. Four practising social workers each completed two playthroughs, followed by a survey and focus group analysed through reflexive thematic analysis. Participants identified rehearsal without direct consequences for actual clients as a promising possibility, while emphasising that a useful system would require emotionally responsive client behaviour and substantially greater decision variation than the prototype provided. The paper contributes three situated design requirements for future IDN-based social-work training: repeated rehearsal, emotionally realistic and shifting client responses, and a decision structure dense enough to reflect the unpredictability of actual encounters. The study reports practitioners’ expectations and evaluations of the prototype, highlighting the value of IDN-based training.",
+		"citation-key": "kurjamaaetal2027IDNSocialWorkers",
+		"container-title": "Interactive Storytelling",
+		"DOI": "10.1007/978-3-032-46125-4_29",
+		"ISBN": "978-3-032-46125-4",
+		"language": "en",
+		"note": "PDF: /files/publications/kurjamaa-et-al-2027-idn-for-social-workers-bridging-the-education–practice-gap-in-early-client-encounters.pdf",
+		"page": "431-441",
+		"publisher": "Springer Nature Switzerland",
+		"publisher-place": "Cham",
+		"source": "Springer Link",
+		"title": "IDN for Social Workers: Bridging the Education–Practice Gap in Early Client Encounters",
+		"title-short": "IDN for Social Workers",
+		"author": [
+			{
+				"family": "Kurjamaa",
+				"given": "Kätriin"
+			},
+			{
+				"family": "Wahlén",
+				"given": "Carl"
+			},
+			{
+				"family": "Blomster-Björk",
+				"given": "Tobias"
+			},
+			{
+				"family": "Bellini",
+				"given": "Mattia"
+			},
+			{
+				"family": "Koenitz",
+				"given": "Hartmut"
+			}
+		],
+		"editor": [
+			{
+				"family": "Mitchell",
+				"given": "Alex"
+			},
+			{
+				"family": "Holloway-Attaway",
+				"given": "Lissa"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2027"
+				]
+			]
+		}
 	}
 ]
