@@ -1,0 +1,17 @@
+{% assign publication = include.publication %}
+{% if publication.pdf %}
+  {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
+  {% assign pub_seconds = publication.date | date: '%s' | plus: 0 %}
+  {% assign seconds_diff = now_seconds | minus: pub_seconds %}
+  {% if publication.embargo_months %}
+    {% assign embargo_seconds = publication.embargo_months | times: 2592000 %}
+  {% else %}
+    {% assign embargo_seconds = 31536000 %}
+  {% endif %}
+
+  {% if seconds_diff > embargo_seconds %}
+    <a href="{{ publication.pdf }}" class="btn btn--success btn--small"><i class="fas fa-file-pdf" aria-hidden="true"></i> Full text PDF</a>
+  {% else %}
+    <a href="mailto:{{ site.author.email }}" class="btn btn--danger btn--small" title="Under publisher embargo"><i class="fas fa-lock" aria-hidden="true"></i> Under embargo - write me for a copy</a>
+  {% endif %}
+{% endif %}

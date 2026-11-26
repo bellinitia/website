@@ -179,7 +179,17 @@ Build the SEO title string based on collection
 
 
   {% if page.pdf %}
+    {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
+    {% assign pub_seconds = page.date | date: '%s' | plus: 0 %}
+    {% assign seconds_diff = now_seconds | minus: pub_seconds %}
+    {% if page.embargo_months %}
+      {% assign embargo_seconds = page.embargo_months | times: 2592000 %}
+    {% else %}
+      {% assign embargo_seconds = 31536000 %}
+    {% endif %}
+    {% if seconds_diff > embargo_seconds %}
   <meta name="citation_pdf_url" content="{{ page.pdf | absolute_url }}">
+    {% endif %}
   {% endif %}
 
 

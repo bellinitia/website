@@ -159,12 +159,8 @@ layout: default
           </p>
           
           <p>
-            {% comment %}1. PDF Button{% endcomment %}
-            {% if page.pdf %}
-              <a href="{{ page.pdf }}" class="btn btn--success btn--small">
-                <i class="fa fa-file-pdf" aria-hidden="true"></i> full text pdf
-              </a>
-            {% endif %}
+            {% comment %}1. PDF or embargo button{% endcomment %}
+            {% include publication-pdf-button.html publication=page %}
             
             {% comment %}2. External Link (PaperURL or DOI){% endcomment %}
             {% if page.paperurl %}

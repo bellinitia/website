@@ -3,7 +3,6 @@ layout: none
 permalink: /_headers
 ---
 
-
 {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
 {% for post in site.publications %}
   {% if post.pdf %}
@@ -14,9 +13,12 @@ permalink: /_headers
     {% else %}
       {% assign embargo_seconds = 31536000 %}
     {% endif %}
+    {% assign pdf_path = post.pdf | remove_first: site.url %}
     {% if seconds_diff <= embargo_seconds %}
-{{ post.pdf }}
+      {% unless pdf_path contains "://" %}
+{{ pdf_path }}
   X-Robots-Tag: noindex, nofollow
+      {% endunless %}
     {% endif %}
   {% endif %}
 {% endfor %}

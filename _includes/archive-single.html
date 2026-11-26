@@ -67,23 +67,7 @@
     <p class="archive__item-links">
 
       
-      {% comment %} PDF with embargo logic {% endcomment %}
-      {% if post.pdf %}
-        {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
-        {% assign pub_seconds = post.date | date: '%s' | plus: 0 %}
-        {% assign seconds_diff = now_seconds | minus: pub_seconds %}
-        {% if post.embargo_months %}
-          {% assign embargo_seconds = post.embargo_months | times: 2592000 %}
-        {% else %}
-          {% assign embargo_seconds = 31536000 %}
-        {% endif %}
-
-        {% if seconds_diff > embargo_seconds %}
-          <a href="{{ post.pdf }}" class="btn btn--success btn--small"><i class="fas fa-file-pdf"></i> full text pdf</a>
-        {% else %}
-          <span class="btn btn--danger btn--small" title="Under publisher embargo"><a href="mailto:{{ site.author.email }}" style="color:white"><i class="fas fa-lock"></i> Under embargo - write me for a copy</a></span>
-        {% endif %}
-      {% endif %}
+      {% include publication-pdf-button.html publication=post %}
 
       {% if post.paperurl %}
         <a href="{{ post.paperurl }}" class="btn btn--info btn--small"><i class="fas fa-external-link-alt"></i></a>
