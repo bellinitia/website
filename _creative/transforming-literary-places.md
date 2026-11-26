@@ -10,3 +10,5 @@ published: true
 Co-curated with Dr. Francesca Arnavas, *Transforming Literary Places* explores how literature connects with digital and physical arts, and how stories and words can shape and transform the places around us.
 
 The exhibition was part of the official programme of Tartu 2024 European Capital of Culture and was supported by the Cultural Endowment of Estonia.
+
+Discover more about the exhibition on the <a href="https://muuseum.ut.ee/en/content/exhibition-transforming-literary-places">Museum website</a>, in the <a href="https://tartu2024.ee/en/programme-archive/exhibition-transforming-literary-places/?event=81540">Tartu 2024 programme archive</a>, and on <a href="https://www.facebook.com/profile.php?id=61557533692245">Facebook</a>.
